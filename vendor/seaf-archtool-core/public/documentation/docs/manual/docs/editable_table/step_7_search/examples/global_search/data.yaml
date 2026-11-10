@@ -1,0 +1,58 @@
+archtool.plugins.editable-table.search.global_search.data:
+  row_1:
+    name: Сервис платежей
+    status: opt_1
+    tags:
+      - payments
+      - core
+    links:
+      - href: https://ru.wikipedia.org/
+        text: Wiki
+  row_2:
+    name: Каталог продуктов
+    status: opt_1
+    tags:
+      - reporting
+    links:
+      - href: /
+        text: Главная
+  row_3:
+    name: Биллинг
+    status: opt_2
+    tags:
+      - payments
+    links:
+  row_4:
+    name: Портал отчётности
+    status: opt_3
+    tags:
+      - reporting
+      - core
+    links:
+      - https://www.google.ru/
+  row_5:
+    name: Шина интеграции
+    status: opt_1
+    tags:
+      - core
+    links:
+  row_6:
+    name: Архив документов
+    status: opt_2
+    tags:
+    links:
+      - href: https://ya.ru/
+        text: Яндекс
+  row_7:
+    name: Платёжный шлюз
+    status: opt_3
+    tags:
+      - payments
+    links:
+  row_8:
+    name: Справочник клиентов
+    status:
+    tags:
+      - core
+      - reporting
+    links:

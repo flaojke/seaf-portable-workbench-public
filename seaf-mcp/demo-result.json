@@ -1,0 +1,18 @@
+{
+  "proposal": "a8f147aa-dce8-408d-87d4-2fa97a76241c",
+  "validation": {
+    "ok": true,
+    "rules": 15,
+    "problems": [],
+    "changesHash": "6964f86e198e2d825002c4710c1824a0b46b9c87b9f0c6dc7e745dc179434254",
+    "draftHash": "fd596576fcb16d2e2f2383879f4889d5fa4a5d421b2ba0bb5f33b28f4964b760"
+  },
+  "applied": {
+    "commit": "612bb9f3e51e05c20c38c897de2663aa5a53928e",
+    "status": "applied",
+    "reload": {
+      "status": "updated",
+      "problems": []
+    }
+  }
+}

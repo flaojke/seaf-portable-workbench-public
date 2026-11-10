@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Должно находиться перед подключаемыми стилями: CSS Vuetify может попасть в общий чанк, который загружается раньше app.css, и тогда порядок слоёв зафиксируется неверно. -->
+    <style data-vuetify-layer-order>@layer vuetify-core, vuetify-components, vuetify-overrides, vuetify-utilities, vuetify-final;</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <title>SEAF</title>
+    <style>
+      .header {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, .9);
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+      }
+      .swagger-ui label.url-label {
+        display: block;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const body = document.body;
+      function preventDefault(event) {
+        event.preventDefault();
+      }
+
+      const listenerParams = ["dragstart", preventDefault];
+
+      body.addEventListener(...listenerParams);
+      const bodyRemoveCb = body.remove;
+
+      body.remove = function () {
+        body.removeEventListener(...listenerParams);
+        if (bodyRemoveCb) {
+          bodyRemoveCb.call(this);
+        }
+      };
+    </script>
+  </body>
+</html>

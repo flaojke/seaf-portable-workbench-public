@@ -1,0 +1,58 @@
+/*
+  Общая палитра представлений (markdown, таблицы, markaper, editable-table).
+  Цвета представлений берутся отсюда, а не задаются в компонентах напрямую.
+  Фирменный цвет задается один раз — токеном --color-brand-primary (base.css);
+  тема Vuetify читает его же при запуске (src/frontend/index.js).
+*/
+:root {
+  --dh-primary: var(--color-brand-primary);
+  --dh-primary-strong: color-mix(in srgb, var(--dh-primary) 80%, black);
+  --dh-primary-soft: color-mix(in srgb, var(--dh-primary) 10%, white);
+  --dh-selection: color-mix(in srgb, var(--dh-primary) 24%, white);   /* выделение текста */
+  --dh-on-primary: #FFFFFF;          /* текст и иконки на фоне --dh-primary */
+
+  --dh-text: #1D2622;
+  --dh-text-secondary: #56635D;
+  --dh-text-muted: #87938E;
+
+  --dh-surface: #FFFFFF;
+  --dh-surface-alt: #F6F8F7;
+  --dh-surface-header: #EEF4F1;
+  --dh-surface-hover: #F3F8F6;
+  --dh-surface-overlay: rgba(255, 255, 255, 0.92);  /* полупрозрачная подложка закрепленных панелей */
+
+  --dh-border: #E3E8E6;
+  --dh-border-strong: #D3DFD9;
+
+  --dh-chip-bg: #EDF3F0;
+  --dh-chip-border: #D8E3DE;
+  --dh-chip-text: #24332C;
+
+  --dh-status-ok-bg: #E4F4EC;
+  --dh-status-ok-text: #16704B;
+  --dh-status-wip-bg: #FFF2D6;
+  --dh-status-wip-text: #8A5A00;
+  --dh-status-off-bg: #EEF0EF;
+  --dh-status-off-text: #56635D;
+  --dh-status-bad-bg: #FDE7E4;
+  --dh-status-bad-text: #A6332A;
+  --dh-status-info-bg: #EAF0F6;        /* сведения: нейтральный серо-голубой, отличим от ok */
+  --dh-status-info-text: #3A5A7C;
+
+  --dh-attention: #E0A100;
+  --dh-danger: #B4372B;              /* ошибки: фон с текстом --dh-on-primary */
+
+  --dh-code-variable: #A86800;       /* переменные в подсветке кода (mustache) */
+
+  --dh-shadow-overlay: 0 2px 4px rgba(18, 38, 30, 0.08), 0 12px 32px rgba(18, 38, 30, 0.16);
+  --dh-shadow-scroll-edge: rgba(18, 38, 30, 0.16);   /* тень у края прокручиваемой таблицы */
+  --dh-shadow-raised: 0 1px 2px rgba(18, 38, 30, 0.16);  /* выбранная кнопка на общей подложке */
+  --dh-surface-header-tint: rgba(85, 145, 115, 0.1); /* --dh-surface-header полупрозрачный: поверх --dh-surface
+                                                        дает тот же цвет и пропускает тень у края таблицы */
+
+  --dh-radius: 8px;
+  --dh-radius-lg: 10px;
+  --dh-widget-inset: 20px;           /* отступ заголовка и содержимого от рамки виджета */
+  --dh-widget-gap: 16px;             /* промежуток между виджетами сетки */
+  --dh-font-mono: 'Cascadia Code', ui-monospace, Menlo, Consolas, monospace;
+}

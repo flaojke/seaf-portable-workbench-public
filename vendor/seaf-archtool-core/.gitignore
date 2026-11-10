@@ -1,0 +1,55 @@
+.DS_Store
+node_modules
+/cache
+/dist
+/vscode-dist
+/certs
+/gitlab
+/src/hidden
+/public/temp
+/logs
+.npmrc
+!resources/**/.npmrc
+
+./plugins.json
+
+/public/workspace/**/*
+
+# local env files
+*.env*
+
+# local bugs log
+bugs.bug
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+.gigaide
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.code-workspace
+
+# Lock files
+# Вызвало сбой сборки докера
+# пока вернем до прихода DevOps
+/coverage/
+/test-report.xml
+
+CLAUDE*.md
+AGENT*.md
+/rsa/
+.mcp.json
+
+# Локальные рабочие заметки по задачам (не для коммита)
+/notes/
+
+# Папка с собранными документ-плагинами
+/public/plugins

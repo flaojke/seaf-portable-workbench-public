@@ -1,0 +1,19 @@
+{
+  "name": "dochub-plugin-devtool",
+  "version": "1.0.0",
+  "description": "DevTool New",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "A. Trubnikov",
+  "license": "MIT",
+  "dependencies": {
+    "@codemirror/language": "^6.11.3",
+    "@uiw/codemirror-theme-dracula": "^4.25.10",
+    "codemirror": "^6.0.2",
+    "core-js": "3.26.1",
+    "vue-codemirror": "^6.1.1",
+    "vue-json-viewer": "^3.0.4"
+  }
+}

@@ -1,0 +1,11 @@
+forms:
+  - entity: [component, database, queue, cloud]
+    fields:
+      owner:
+        title: Команда-владелец
+      description:
+        title: Назначение
+      kind:
+        title: Тип элемента
+      technology:
+        title: Прикладной стек

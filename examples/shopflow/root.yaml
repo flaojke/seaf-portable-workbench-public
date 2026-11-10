@@ -1,0 +1,8 @@
+imports:
+  - architecture/components.yaml
+  - architecture/contexts.yaml
+  - architecture/technologies.yaml
+  - architecture/forms.yaml
+  - architecture/rules.yaml
+  - docs.yaml
+  - architecture/trust.yaml

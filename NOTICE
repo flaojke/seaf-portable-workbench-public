@@ -1,0 +1,24 @@
+SEAF-Portable
+
+This project is a derivative fork of SEAF.ArchTool:
+https://gitverse.ru/seafteam/seaf-archtool-core
+https://gitverse.ru/seafteam/seaf-archtool-core.git
+
+SEAF.ArchTool is based on DocHub:
+https://dochub.info
+https://github.com/DocHubTeam/DocHub
+Historical upstream reference: https://github.com/RabotaRu/DocHub
+
+Original notices retained in vendor/seaf-archtool-core/NOTICE:
+Copyright (C) 2021 owner Roman Piontik R.Piontik@mail.ru
+Copyright (C) 2021 Sber
+
+The fork's native Windows distribution, project management, editing, MCP,
+local history and documentation are maintained in this repository.
+Upstream source identity and local modifications are recorded in UPSTREAM.md
+and vendor/seaf-archtool-core/UPSTREAM.json.
+
+Source code is distributed under the Apache License, Version 2.0.
+Bundled third-party runtime components retain their respective licenses.
+Distribution notices and inventories are included in licenses/ and runtime
+manifests inside the portable release.

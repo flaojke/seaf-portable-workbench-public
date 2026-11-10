@@ -1,0 +1,16 @@
+{
+  "platform": "win32-x64",
+  "node": {
+    "version": "22.23.4",
+    "url": "https://nodejs.org/dist/v22.23.4/node-v22.23.4-win-x64.zip",
+    "checksumSource": "https://nodejs.org/dist/v22.23.4/SHASUMS256.txt",
+    "sha256": "cbc74b5e0982c9dbb41525fd8fb5dcd32fbee237863f7829072f4639a1ce5f20",
+    "archiveDirectory": "node-v22.23.4-win-x64"
+  },
+  "git": {
+    "version": "2.56.0.4",
+    "url": "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/MinGit-2.56.0.4-64-bit.zip",
+    "checksumSource": "https://api.github.com/repos/git-for-windows/git/releases/tags/v2.56.0.windows.4",
+    "sha256": "e3bf78351fe777fba47ddee5950082f8a98bb0f02604fdc7ba3ee2cb68ffa877"
+  }
+}

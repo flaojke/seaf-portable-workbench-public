@@ -1,0 +1,2 @@
+# Design
+Keep source distribution work in an isolated checkout. Retain mandatory upstream copyright and license headers. Use an inert telemetry interface with the same exported functions, no SDK dependency and no network transport. Disabled integration entry points return explicit unavailable responses. Rename documentation paths and IDs consistently. Do not read or copy runtime user data. Preserve the old history in a verified private bundle, and make the publication history independent.

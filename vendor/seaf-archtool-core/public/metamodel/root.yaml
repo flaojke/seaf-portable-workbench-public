@@ -1,0 +1,33 @@
+# Стартовая страница для плагина
+docs:
+  local.home.workspace:
+    location: Моя работа/Обзор
+    title: Моя работа
+    type: lsv-workbench
+    view: home
+  local.composer.workspace:
+    location: Схемы/Конструктор
+    title: Конструктор схем
+    type: lsv-workbench
+    view: composer
+  local.scenarios.workspace:
+    location: Схемы/Сценарии взаимодействия
+    title: Сценарии взаимодействия
+    type: lsv-workbench
+    view: scenarios
+  local.projects.workspace:
+    location: Проекты/Управление проектами
+    title: Проекты
+    type: lsv-workbench
+    view: projects
+  local.editor.workspace:
+    location: Редактор/Объекты и потоки
+    title: Редактор
+    type: lsv-workbench
+    view: editor
+  dochub.welcome:
+    type: markdown
+    source: docs/welcome.md
+
+imports:
+  - dochub/root.yaml

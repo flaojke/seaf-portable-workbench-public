@@ -1,0 +1,66 @@
+imports:
+  - menu.yaml
+  - data/markdown_preview.yaml
+docs:
+  archtool.plugins.editable-table.headers.markdown-preview.ttb:
+    type: editable-table
+    direction: ttb
+    new_row_allowed: false
+    origin:
+      body: >
+        ($."archtool.plugins.editable-table.headers.markdown-preview.data")
+    headers:
+      - value: title
+        text: Проверка
+        type: text
+      - value: markdown
+        text: Markdown
+        type: text
+        render: markdown
+    source: >
+      ({ "body": {"auto_width": body.auto_width} })
+  archtool.plugins.editable-table.headers.markdown-preview.auto-width:
+    type: editable-table
+    new_row_allowed: false
+    origin:
+      body: >
+        ($."archtool.plugins.editable-table.headers.markdown-preview.data")
+    format: >
+      (
+        $key := $keys(file)[0];
+        { $key: {"auto_width": body.auto_width} }
+      )
+    headers:
+      - value: title
+        text: Проверка
+        type: text
+        width: 180px
+      - value: markdown
+        text: Markdown
+        type: text
+        render: markdown
+    source: >
+      ({ "body": {"auto_width": body.auto_width} })
+  archtool.plugins.editable-table.headers.markdown-preview.fixed-width:
+    type: editable-table
+    new_row_allowed: false
+    origin:
+      body: >
+        ($."archtool.plugins.editable-table.headers.markdown-preview.data")
+    format: >
+      (
+        $key := $keys(file)[0];
+        { $key: {"fixed_width": body.fixed_width} }
+      )
+    headers:
+      - value: title
+        text: Проверка
+        type: text
+        width: 180px
+      - value: markdown
+        text: Markdown
+        type: text
+        render: markdown
+        width: 420px
+    source: >
+      ({ "body": {"fixed_width": body.fixed_width} })

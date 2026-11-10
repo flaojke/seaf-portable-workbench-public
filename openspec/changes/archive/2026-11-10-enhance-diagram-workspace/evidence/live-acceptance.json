@@ -1,0 +1,94 @@
+{
+  "format": "seaf-2.3-curated-deployment-acceptance-v1",
+  "status": "PASS",
+  "version": "2.3.0",
+  "artifact": {
+    "manifest": "7dd32eb90e8ad5591f5e2e7363383868de750989b0c3f90110cf2b9880edce2f",
+    "zipSha256": "a8edb8a7ea163b4310d6bf16622b4faa3b7ad988b828b4c9b4a2ee03f01e3379",
+    "immutableFiles": 76290,
+    "zipEntries": 76291,
+    "sourceCommit": "abb5e00cf84575828a03be117c6a65a10a74f13d"
+  },
+  "acceptance": {
+    "native": {
+      "status": "PASS",
+      "checks": 12
+    },
+    "browser": {
+      "status": "PASS",
+      "checks": 17
+    },
+    "pure": {
+      "status": "PASS",
+      "passed": 61,
+      "failed": 0,
+      "skipped": 0
+    },
+    "compiled": {
+      "status": "PASS",
+      "checks": 10
+    },
+    "launcher": {
+      "status": "PASS",
+      "checks": 8
+    },
+    "ports": {
+      "status": "PASS",
+      "checks": 7
+    },
+    "mcp": {
+      "status": "PASS",
+      "serverVersion": "2.3.0"
+    }
+  },
+  "migration": {
+    "projects": 9,
+    "readonlyProjects": 6,
+    "directoryRevisions": 15,
+    "snapshots": 5,
+    "serverDrafts": 0,
+    "stateFiles": 1300,
+    "oldDataPreserved": true,
+    "modelsCopied": false,
+    "transientRuntimeOrProposalEligibilityCopied": false
+  },
+  "deployment": {
+    "ownedOldBundleGracefullyStopped": true,
+    "explorerHiddenStartup": true,
+    "serviceHealthChecks": 3,
+    "allHttpHealthy": true,
+    "activeSelectionPreserved": true,
+    "privateNativeCallbacksUpdated": 3,
+    "wrapperUpdatedAfterHealthy": true,
+    "shortcutChanged": false,
+    "globalCodexChanged": false
+  },
+  "architectureFilesChanged": false,
+  "completed": "2026-11-10T19:13:05.867Z",
+  "inAppBrowser": {
+    "status": "PASS",
+    "project": "shopflow",
+    "view": "composer",
+    "nodes": 2,
+    "modelChangesPrepared": 0,
+    "modelInspectorFields": [
+      "title",
+      "entity",
+      "description",
+      "owner",
+      "kind",
+      "technology"
+    ],
+    "sourceFilesMutated": false,
+    "screenshot": "seaf-mcp/state/live-editor-2.3.0.jpg"
+  },
+  "helloReload": "updated; 0 problems; guide visible; active ShopFlow restored",
+  "configuredPortalRecovery": {
+    "status": "PASS",
+    "configuredReloadsUpdated": 2,
+    "problems": 0,
+    "helloGuideVisible": true,
+    "activeSelectionRestored": true,
+    "completed": "2026-11-10T19:24:10.648Z"
+  }
+}

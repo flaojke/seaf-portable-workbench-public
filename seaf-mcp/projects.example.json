@@ -1,0 +1,18 @@
+{
+  "activeProject": "shopflow",
+  "projects": [
+    {
+      "id": "shopflow",
+      "title": "ShopFlow",
+      "root": "../examples/shopflow",
+      "manifest": "root.yaml",
+      "source": { "kind": "directory", "provider": "local" },
+      "writable": true,
+      "validation": {
+        "runtime": "native",
+        "workspace": "../examples/shopflow",
+        "manifest": "workspace/root.yaml"
+      }
+    }
+  ]
+}

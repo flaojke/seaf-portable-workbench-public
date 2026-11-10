@@ -1,0 +1,14 @@
+{
+  "name": "augmented-chat-new",
+  "version": "1.0.0",
+  "description": "New Augmented Chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M. Niyazmatov + Cursor",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^15.0.11"
+  }
+}

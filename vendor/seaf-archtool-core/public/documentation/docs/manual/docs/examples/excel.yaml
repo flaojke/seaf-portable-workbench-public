@@ -1,0 +1,41 @@
+docs:
+  archtool.example.excel.export:
+    title: Документ с типом excel-export
+    type: excel-export
+    file_name: >
+      ("Шаблон_компонентов.xlsx")
+    button_text: >
+      ("Скачать шаблон")
+    options:
+      show-grid-lines: false
+      margin-left: 3.5
+      margin-top: 10.5
+      table:
+        headers:
+          height: 28.5
+    pages:
+      - name: Компоненты
+        title: Перечень компонентов
+        description: Заполните таблицу и загрузите файл через документ excel-import
+        components:
+          - type: table
+            name: components
+            headers:
+              - value: ID
+              - value: Название
+              - value: Критичность
+                type: select
+                options:
+                  - Высокая
+                  - Средняя
+                  - Низкая
+            source: >
+              (
+                {
+                  "body": [
+                    ["", "", ""],
+                    ["", "", ""],
+                    ["", "", ""]
+                  ]
+                }
+              )

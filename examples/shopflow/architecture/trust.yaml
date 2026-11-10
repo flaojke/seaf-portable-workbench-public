@@ -1,0 +1,9 @@
+trustPolicies:
+  logistics-to-internal:
+    title: Адрес и подтверждённый заказ между Logistics и Commerce
+    classification: confidential
+    fromZone: logistics
+    toZone: internal
+    requireEncryption: true
+    allowedProtocols:
+      - HTTPS

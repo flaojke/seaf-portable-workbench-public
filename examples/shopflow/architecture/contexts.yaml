@@ -1,0 +1,51 @@
+contexts:
+  demo.shop:
+    title: ShopFlow — все компоненты и связи
+    location: ShopFlow/Архитектура/Все компоненты
+    presentation: smartants
+    extra-links: false
+    components:
+      - demo
+      - demo.shop
+      - demo.shop.*
+  demo.shop.services:
+    title: ShopFlow — взаимодействие сервисов
+    location: ShopFlow/Архитектура/Сервисы
+    presentation: smartants
+    extra-links: false
+    components:
+      - demo
+      - demo.shop
+      - demo.shop.web
+      - demo.shop.gateway
+      - demo.shop.catalog
+      - demo.shop.cart
+      - demo.shop.orders
+      - demo.shop.payments
+      - demo.shop.inventory
+      - demo.shop.notifications
+      - demo.shop.events
+      - demo.shop.identity
+      - demo.shop.payment_provider
+      - demo.shop.email_provider
+      - demo.shop.delivery
+  demo.shop.data:
+    title: ShopFlow — владение данными
+    location: ShopFlow/Архитектура/Данные
+    presentation: smartants
+    extra-links: false
+    components:
+      - demo.shop.catalog
+      - demo.shop.cart
+      - demo.shop.orders
+      - demo.shop.payments
+      - demo.shop.inventory
+      - demo.shop.notifications
+      - demo.shop.delivery
+      - demo.shop.catalog_db
+      - demo.shop.cart_cache
+      - demo.shop.orders_db
+      - demo.shop.payments_db
+      - demo.shop.inventory_db
+      - demo.shop.notifications_db
+      - demo.shop.delivery_db

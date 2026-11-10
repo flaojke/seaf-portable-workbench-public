@@ -1,0 +1,14 @@
+/* Preserve Vuetify's intended cascade order after production CSS minification. */
+@layer vuetify-core, vuetify-components, vuetify-overrides, vuetify-utilities, vuetify-final;
+
+@import url('vuetify/v-application.css');
+@import url('vuetify/v-list-item.css');
+
+@import url('typography.css');
+@import url('swagger-ui.css');
+@import url('presentation.css');
+@import url('base.css');
+@import url('menus.css');
+@import url('alerts.css');
+@import url('dialogs.css');
+@import url('plugins.css');

@@ -1,0 +1,109 @@
+{
+  "region": {
+    "xml": "<object id=\"{{id}}\" label=\"{{label}}\">\n  <mxCell style=\"swimlane;whiteSpace=wrap;html=1;fillColor=#CCE5FF;\" vertex=\"1\" parent=\"1\">\n    <mxGeometry x=\"{{x_pos}}\" y=\"{{y_pos}}\" width=\"{{width}}\" height=\"{{height}}\" as=\"geometry\" />\n  </mxCell>\n</object>\n",
+    "schema": "seaf.company.ta.services.dc_regions",
+    "x": 390,
+    "y": 30,
+    "h": 630,
+    "w": 760,
+    "offset": 10,
+    "algo": "Y+",
+    "deep": 3
+  },
+  "az": {
+    "xml": "<object id=\"{{id}}\" label=\"{{label}}\">\n  <mxCell style=\"swimlane;whiteSpace=wrap;html=1;fillColor=#CCFFE6;\" vertex=\"1\" parent=\"{region}\">\n    <mxGeometry x=\"{{x_pos}}\" y=\"{{y_pos}}\" width=\"{{width}}\" height=\"{{height}}\" as=\"geometry\" />\n  </mxCell>\n</object>\n",
+    "schema": "seaf.company.ta.services.dc_azs",
+    "parent_id": "region",
+    "x": 390,
+    "y": 30,
+    "h": 300,
+    "w": 360,
+    "offset": 10,
+    "algo": "Y+",
+    "deep": 3
+  },
+  "office": {
+    "xml": "<object id=\"{{id}}\" label=\"{{label}}\">\n  <mxCell style=\"shape=mxgraph.cisco.buildings.generic_building;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;\" vertex=\"1\" parent=\"{region}\">\n    <mxGeometry x=\"{{x_pos}}\" y=\"{{y_pos}}\" width=\"{{width}}\" height=\"{{height}}\" as=\"geometry\" />\n  </mxCell>\n</object>\n",
+    "schema": "seaf.company.ta.services.dc_offices",
+    "parent_id": "region",
+    "x": 20,
+    "y": 40,
+    "h": 60,
+    "w": 120,
+    "offset": 25,
+    "algo": "X+",
+    "deep": 2,
+    "ext_page": "<diagram id=\"{id}\" name=\"{name}\">\n  <mxGraphModel dx=\"{width}\" dy=\"{height}\" grid=\"0\" gridSize=\"10\" guides=\"1\" tooltips=\"1\" connect=\"1\" arrows=\"1\" fold=\"1\" page=\"0\" pageScale=\"1\" pageWidth=\"827\" pageHeight=\"1169\" math=\"0\" shadow=\"0\">\n    <root>\n      <mxCell id=\"0\"/>   \n      <mxCell id=\"1\" parent=\"0\"/>\n      <mxCell value=\"Office\" id=\"001\" style=\"group;strokeColor=default;rounded=0;strokeWidth=1;perimeterSpacing=1;fontColor=none;noLabel=1;\" parent=\"0\" vertex=\"1\">\n        <mxGeometry x=\"615\" y=\"60\" width=\"1385\" height=\"1120\" as=\"geometry\" />\n      </mxCell>\n      <mxCell id=\"003\" value=\"Internet\" style=\"rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=8;fillColor=#FFF7ED;strokeColor=#FDBA74;strokeWidth=1;fontColor=#334155;fontStyle=1;fontSize=11;\" parent=\"0\" vertex=\"1\">\n        <mxGeometry x=\"240\" y=\"60\" width=\"160\" height=\"1060\" as=\"geometry\" />\n      </mxCell>\n      <mxCell id=\"004\" value=\"Транспортная сеть\" style=\"rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=8;fillColor=#FFFBEB;strokeColor=#FCD34D;strokeWidth=1;fontColor=#334155;fontStyle=1;fontSize=11;\" parent=\"0\" vertex=\"1\">\n        <mxGeometry x=\"420\" y=\"60\" width=\"160\" height=\"1060\" as=\"geometry\" />\n      </mxCell>\n      <mxCell id=\"100\" value=\"Connections\" style=\"group;fontColor=none;noLabel=1;\" parent=\"0\"/>\n      <mxCell id=\"101\" value=\"Сервисы KБ\" style=\"group;fontColor=none;noLabel=1;\" parent=\"0\"/>\n      <mxCell id=\"102\" value=\"Tех. сервисы\" style=\"group;fontColor=none;noLabel=1;\" parent=\"0\"/>\n      <mxCell id=\"103\" value=\"Прикладные компоненты\" style=\"group;fontColor=none;noLabel=1;\" parent=\"0\"/>\n    </root>\n  </mxGraphModel>\n</diagram>\n"
+  },
+  "dc": {
+    "xml": "<object id=\"{{id}}\" label=\"{{label}}\">\n  <mxCell style=\"shape=mxgraph.cisco.buildings.branch_office;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;\" vertex=\"1\" parent=\"{availabilityzone}\">\n    <mxGeometry x=\"{{x_pos}}\" y=\"{{y_pos}}\" width=\"{{width}}\" height=\"{{height}}\" as=\"geometry\" />\n  </mxCell>\n</object>\n",
+    "schema": "seaf.company.ta.services.dcs",
+    "parent_id": "availabilityzone",
+    "x": 120,
+    "y": 30,
+    "h": 60,
+    "w": 120,
+    "offset": 25,
+    "algo": "Y+",
+    "deep": 3,
+    "ext_page": "<diagram id=\"{id}\" name=\"{name}\">\n  <mxGraphModel dx=\"{width}\" dy=\"{height}\" grid=\"0\" gridSize=\"10\" guides=\"1\" tooltips=\"1\" connect=\"1\" arrows=\"1\" fold=\"1\" page=\"0\" pageScale=\"1\" pageWidth=\"827\" pageHeight=\"1169\" math=\"0\" shadow=\"0\">\n    <root>\n      <mxCell id=\"0\"/>   \n      <mxCell id=\"1\" parent=\"0\"/>\n      <mxCell id=\"001\" value=\"DC\" style=\"group;strokeColor=default;rounded=0;strokeWidth=1;perimeterSpacing=1;fontColor=none;noLabel=1;\" parent=\"0\" vertex=\"1\">\n        <mxGeometry x=\"615\" y=\"60\" width=\"1825\" height=\"1390\" as=\"geometry\" />\n      </mxCell>\n      <mxCell id=\"003\" value=\"Internet\" style=\"rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=8;fillColor=#FFF7ED;strokeColor=#FDBA74;strokeWidth=1;fontColor=#334155;fontStyle=1;fontSize=11;\" parent=\"0\" vertex=\"1\">\n        <mxGeometry x=\"240\" y=\"60\" width=\"160\" height=\"1400\" as=\"geometry\" />\n      </mxCell>\n      <mxCell id=\"004\" value=\"Транспортная сеть\" style=\"rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=8;fillColor=#FFFBEB;strokeColor=#FCD34D;strokeWidth=1;fontColor=#334155;fontStyle=1;fontSize=11;\" parent=\"0\" vertex=\"1\">\n        <mxGeometry x=\"420\" y=\"60\" width=\"160\" height=\"1400\" as=\"geometry\" />\n      </mxCell>\n      <mxCell id=\"100\" value=\"Connections\" style=\"group;fontColor=none;noLabel=1;\" parent=\"0\"/>\n      <mxCell id=\"101\" value=\"Сервисы KБ\" style=\"group;fontColor=none;noLabel=1;\" parent=\"0\"/>\n      <mxCell id=\"102\" value=\"Tех. сервисы\" style=\"group;fontColor=none;noLabel=1;\" parent=\"0\"/>\n      <mxCell id=\"103\" value=\"Прикладные компоненты\" style=\"group;fontColor=none;noLabel=1;\" parent=\"0\"/>\n    </root>\n  </mxGraphModel>\n</diagram>\n"
+  },
+  "segment_internet": {
+    "xml": "<object id=\"{id}\">\n  <mxCell value=\"\" style=\"group;noLabel=1;\" parent=\"003\" vertex=\"1\">\n    <mxGeometry  x=\"{{x_pos}}\" y=\"{{y_pos}}\" width=\"{{width}}\" height=\"{{height}}\" as=\"geometry\" />            \n  </mxCell>\n</object>\n",
+    "schema": "seaf.company.ta.services.network_segments",
+    "parent_id": "location",
+    "type": "zone:INTERNET",
+    "x": 10,
+    "y": 10,
+    "w": 140,
+    "h": 350,
+    "algo": "Y+",
+    "deep": 1,
+    "offset": 10,
+    "global_positioning": true
+  },
+  "segment_transport_wan": {
+    "xml": "<object id=\"{id}\">\n  <mxCell value=\"\" style=\"group;noLabel=1;\" parent=\"004\" vertex=\"1\">\n    <mxGeometry  x=\"{{x_pos}}\" y=\"{{y_pos}}\" width=\"{{width}}\" height=\"{{height}}\" as=\"geometry\" />            \n  </mxCell>\n</object>\n",
+    "schema": "seaf.company.ta.services.network_segments",
+    "parent_id": "location",
+    "type": "zone:TRANSPORT-WAN",
+    "x": 10,
+    "y": 10,
+    "w": 140,
+    "h": 350,
+    "algo": "Y+",
+    "deep": 1,
+    "offset": 10,
+    "global_positioning": true
+  },
+  "isp": {
+    "xml": "<mxCell id=\"{{id}}\" value=\"\" style=\"group;noLabel=1;\" parent=\"{parent_id}\" vertex=\"1\">\n    <mxGeometry  x=\"{{x_pos}}\" y=\"{{y_pos}}\" width=\"{{width}}\" height=\"{{height}}\" as=\"geometry\" />            \n</mxCell> <mxCell id=\"{{id}}\" value=\"&lt;div style=&quot;font-size: 9px;&quot;&gt;&lt;font style=&quot;font-size: 9px; font-family: Calibri; color: rgb(255, 255, 255); direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;ISP&lt;br style=&quot;font-size: 9px;&quot;&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 9px; font-family: Calibri; color: rgb(255, 255, 255); direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;{title}&lt;/font&gt;&lt;font style=&quot;font-size: 9px; font-family: Calibri; color: rgb(255, 255, 255); direction: ltr; letter-spacing: 0px; line-height: 120%; opacity: 1;&quot;&gt;&lt;br style=&quot;font-size: 9px;&quot;&gt;&lt;/font&gt;&lt;/div&gt;\" style=\"verticalAlign=middle;align=center;vsdxID=5657;fillColor=#612621;gradientColor=none;shape=stencil(nZBLDsIwEENPM1sUMoILlHIBThCRQEaEpErD9/SkNUhVFyy6G9vPGsnETe9N50irvuR0cQ+xxRPvSGuJ3mUp9SJuiZtTyu6c0y1a6M5UUqvRcRad9UBrZfLxIG8Hb7viDWz0ruk+/HsiVYhe376C3gMNEifoL1wE/0EXgrP39RgXwVYSAgad5vMFq4X1uf0A);strokeColor=#6a5628;spacingTop=-2;spacingBottom=-2;spacingLeft=-2;spacingRight=-2;labelBackgroundColor=none;rounded=1;html=1;whiteSpace=wrap;horizontal=1;fontSize=9;\" vertex=\"1\" parent=\"{Group_ID}\">\n    <mxGeometry x=\"0\" y=\"5\" width=\"66\" height=\"40\" as=\"geometry\" />\n</mxCell> <object label=\"\" id=\"{{id}}\">\n    <mxCell style=\"shape=mxgraph.cisco.routers.router;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;labelBackgroundColor=default;fontSize=12;fontColor=#FFFFFF;\" vertex=\"1\" parent=\"{Group_ID}\">\n      <mxGeometry x=\"60\" y=\"25\" width=\"28\" height=\"22\" as=\"geometry\" />\n    </mxCell>\n</object> <mxCell id=\"{{id}}\" value=\"&lt;div style=&quot;font-size: 1px&quot;&gt;&lt;p style=&quot;align:center;margin-left:0;margin-right:0;margin-top:0px;margin-bottom:0px;text-indent:0;valign:middle;direction:ltr;&quot;&gt;&lt;font style=&quot;font-size: 9px; font-family: Calibri; color: rgb(0, 0, 0); direction: ltr; letter-spacing: 0px; line-height: 100%; opacity: 1;&quot;&gt;&lt;b&gt;{title} Router&lt;/b&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 9px; font-family: Calibri; color: rgb(0, 0, 0); direction: ltr; letter-spacing: 0px; line-height: 100%; opacity: 1;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;\" style=\"verticalAlign=middle;align=center;vsdxID=12895;fillColor=#ffff00;gradientColor=none;fillOpacity=40;shape=stencil(nZBLDoAgDERP0z3SIyjew0SURgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);strokeColor=none;spacingTop=-3;spacingBottom=-3;spacingLeft=-3;spacingRight=-3;labelBackgroundColor=none;rounded=0;html=1;whiteSpace=wrap;\" vertex=\"1\" parent=\"{Group_ID}\">\n    <mxGeometry x=\"70\" y=\"45\" width=\"39\" height=\"18\" as=\"geometry\" />\n</mxCell>\n",
+    "schema": "seaf.company.ta.services.networks",
+    "parent_id": "segment",
+    "parent_key": "zone",
+    "type": "type:WAN",
+    "require_fields": [
+      "provider"
+    ],
+    "deep": 15,
+    "offset": 25,
+    "x": 10,
+    "y": 5,
+    "w": 110,
+    "h": 60,
+    "provider_internet_x": 30,
+    "provider_transport_x": 30,
+    "provider_y": 45,
+    "provider_layout_height": 590,
+    "algo": "Y+"
+  },
+  "network_links": {
+    "xml": "<object id=\"{id}\" label=\"{label}\">\n    <mxCell style=\"{style}\" edge=\"1\" parent=\"100\" source=\"{source}\" target=\"{target}\">\n        <mxGeometry relative=\"1\" as=\"geometry\"/>\n    </mxCell>\n</object>\n",
+    "style": "endArrow=none;edgeStyle=orthogonalEdgeStyle;rounded=0;curved=0;strokeColor=#64748B;strokeWidth=1;opacity=70;labelBackgroundColor=none;fontColor=#334155;fontSize=9;",
+    "schema": "seaf.company.ta.services.networks",
+    "parent_id": "segment",
+    "targets": "location",
+    "parent_key": "location",
+    "type": "type:WAN"
+  }
+}

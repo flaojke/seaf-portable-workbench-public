@@ -1,0 +1,89 @@
+{
+  "format": "seaf-offline-inputs-v1",
+  "platform": "win32-x64",
+  "inputs": [
+    {
+      "id": "drawio-license",
+      "version": "31.5.3",
+      "url": "https://raw.githubusercontent.com/jgraph/drawio/v31.5.3/LICENSE",
+      "file": "drawio-LICENSE-31.5.3.txt",
+      "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+      "source": "https://github.com/jgraph/drawio/blob/v31.5.3/LICENSE",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "plantuml-license",
+      "version": "1.2026.9",
+      "url": "https://raw.githubusercontent.com/plantuml/plantuml/v1.2026.9/LICENSE",
+      "file": "plantuml-LICENSE.txt",
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+      "destination": "licenses/plantuml/LICENSE.txt",
+      "source": "https://github.com/plantuml/plantuml/blob/v1.2026.9/LICENSE"
+    },
+    {
+      "id": "plantuml-copying",
+      "version": "1.2026.9",
+      "url": "https://raw.githubusercontent.com/plantuml/plantuml/v1.2026.9/COPYING",
+      "file": "plantuml-COPYING.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "destination": "licenses/plantuml/COPYING.txt",
+      "source": "https://github.com/plantuml/plantuml/blob/v1.2026.9/COPYING"
+    },
+    {
+      "id": "plantuml-copying-lesser",
+      "version": "1.2026.9",
+      "url": "https://raw.githubusercontent.com/plantuml/plantuml/v1.2026.9/COPYING.LESSER",
+      "file": "plantuml-COPYING-LESSER.txt",
+      "sha256": "a5681bf9b05db14d86776930017c647ad9e6e56ff6bbcfdf21e5848288dfaf1b",
+      "destination": "licenses/plantuml/COPYING.LESSER.txt",
+      "source": "https://github.com/plantuml/plantuml/blob/v1.2026.9/COPYING.LESSER"
+    },
+    {
+      "id": "plantuml-notices",
+      "version": "1.2026.9",
+      "url": "https://raw.githubusercontent.com/plantuml/plantuml/v1.2026.9/LICENSES.md",
+      "file": "plantuml-LICENSES-md.txt",
+      "sha256": "e4b3dd02a8b330544a6312e03b29f76c961f872ba4b7e2bb33f3b9c454bfbe2e",
+      "destination": "licenses/plantuml/LICENSES.md",
+      "source": "https://github.com/plantuml/plantuml/blob/v1.2026.9/LICENSES.md"
+    },
+    {
+      "id": "graphviz-license",
+      "version": "embedded-in-plantuml-1.2026.9",
+      "url": "https://raw.githubusercontent.com/plantuml/graphviz-distributions/c1184d00c8d5d46110977afaef0fc7d210cbc443/LICENSE",
+      "file": "graphviz-LICENSE.txt",
+      "sha256": "cc07bd2bd6ba843a9a2865ed891d5a3b5835a64bab6fa90945403ee53965d46f",
+      "destination": "licenses/graphviz-LICENSE.txt",
+      "source": "https://github.com/plantuml/graphviz-distributions/tree/c1184d00c8d5d46110977afaef0fc7d210cbc443",
+      "license": "EPL-1.0; original distribution notice"
+    },
+    {
+      "id": "drawio",
+      "version": "31.5.3",
+      "url": "https://github.com/jgraph/drawio/releases/download/v31.5.3/draw.war",
+      "file": "drawio-31.5.3.war",
+      "sha256": "6c4ab25145c3479bf0097e4fccd20c602968615986bc999af8a214719fabd3f4",
+      "source": "https://github.com/jgraph/drawio/releases/tag/v31.5.3",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "jre",
+      "version": "21.0.13+9",
+      "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jre_x64_windows_hotspot_21.0.13_9.zip",
+      "file": "OpenJDK21U-jre_x64_windows_hotspot_21.0.13_9.zip",
+      "sha256": "2332c0b4cff6bed722da3567c91d5e47568bcba863fa4945d0a8d6fc76158628",
+      "source": "https://github.com/adoptium/temurin21-binaries/releases/tag/jdk-21.0.13%2B9",
+      "license": "GPL-2.0-with-classpath-exception and bundled component notices"
+    },
+    {
+      "id": "plantuml",
+      "version": "1.2026.9",
+      "url": "https://github.com/plantuml/plantuml/releases/download/v1.2026.9/plantuml-1.2026.9.jar",
+      "file": "plantuml-1.2026.9.jar",
+      "sha256": "aa4a1d06f8911c4b842beff4828dd955be431692b631a312d04c0e9fab9581de",
+      "source": "https://github.com/plantuml/plantuml/releases/tag/v1.2026.9",
+      "license": "GPL-3.0 and bundled component notices",
+      "graphviz": "Windows minimal dot and notices embedded in this exact JAR; no global installation"
+    }
+  ]
+}

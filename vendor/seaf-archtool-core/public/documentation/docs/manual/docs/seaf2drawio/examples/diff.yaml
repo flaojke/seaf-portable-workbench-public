@@ -1,0 +1,27 @@
+flix.office.hq_page: []
+flix.dc.01_page:
+  - id: link_id:Sber Cloud DC:generic:flix.kb.fpsu_1_flix.lan.dc.dmz.vpn
+    diff:
+      geometry_attr_key:
+        pointsArray:
+          - - "890"
+            - "420"
+          - - "830"
+            - "420"
+          - - "830"
+            - "1100"
+  - id: link_id:Sber Cloud DC:generic:flix.kb.5_flix.lan.dc.int.security
+    diff:
+      geometry_attr_key:
+        pointsArray:
+          - - "1795"
+            - "510"
+  - id: link_id:Sber Cloud
+      DC:generic:flix.backup.cyberbackup_flix.lan.dc.int.it.services
+    diff:
+      geometry_attr_key:
+        pointsArray:
+          - - "2199"
+            - "740"
+          - - "1560"
+            - "740"

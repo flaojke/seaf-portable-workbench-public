@@ -1,0 +1,7 @@
+Generated documentation illustration
+Created from an original text prompt for this fork on 2026-11-10 using OpenAI image generation.
+No reference photograph or third-party artwork was supplied to generate the illustration.
+Maintainer: LSV.
+This new asset is included with the fork under its Apache-2.0 source license.
+JPEG: 640 x 640 pixels.
+SHA-256: 8fb8ac6f4ecb3fab4e833ea692d57182927961600e98884c678047e6c5274de1

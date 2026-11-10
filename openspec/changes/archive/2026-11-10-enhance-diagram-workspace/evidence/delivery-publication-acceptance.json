@@ -1,0 +1,46 @@
+{
+  "format": "seaf-public-evidence-summary-v2",
+  "status": "recorded",
+  "release": "2.3.0",
+  "observedOn": "2026-11-10",
+  "scope": "Observed live deployment, configured portal recovery and functional source publication. Later documentation/archive metadata is a separate remote update.",
+  "countsAreNotAdditive": true,
+  "live": {
+    "status": "PASS",
+    "healthyServices": 3,
+    "connections": 9,
+    "readonlyConnections": 6,
+    "directoryRevisions": 15,
+    "snapshots": 5,
+    "historyIntegrityVerified": true,
+    "oldDataPreserved": true,
+    "existingLauncherUpdatedAfterHealthChecks": true,
+    "mainReload": "updated",
+    "helloReload": "updated",
+    "configuredPortalProblems": 0,
+    "helloGuideVisible": true,
+    "activeShopflowRestored": true,
+    "inAppComposerAndRealInspectorObserved": true,
+    "architectureFilesChanged": false,
+    "proposalsReappliedDuringRecovery": false,
+    "browserErrors": 0,
+    "externalRequests": 0
+  },
+  "functionalPublication": {
+    "status": "PASS",
+    "repository": "flaojke/seaf-portable-workbench",
+    "visibility": "private",
+    "branch": "main",
+    "commit": "d3fd346fde172f7a23a354bcd88e680aef2f9096",
+    "tree": "4da9ae2d56c8f012e52c0a9bc28ded46abefaac0",
+    "files": 1901,
+    "onlySeaf": true,
+    "oldWorkspaceHistoryPublished": false
+  },
+  "limitations": [
+    "The functional commit excludes this later metadata/archive update.",
+    "A GitHub Releases binary upload is not asserted.",
+    "Another physical computer and Windows 10 were not tested.",
+    "Detailed local receipts, models, credentials, paths and screenshots are excluded."
+  ]
+}

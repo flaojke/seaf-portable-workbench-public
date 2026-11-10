@@ -1,0 +1,38 @@
+{
+  "format": "seaf-public-evidence-summary-v2",
+  "status": "passed",
+  "scope": "Curated historical observations; no new test execution or additional acceptance is asserted.",
+  "countsAreNotAdditive": true,
+  "observedStates": {
+    "passed": 6
+  },
+  "observedCounts": [
+    {
+      "group": 1,
+      "tests": 31,
+      "pass": 31,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "group": 2,
+      "tests": 96,
+      "pass": 89,
+      "fail": 0,
+      "skipped": 7
+    }
+  ],
+  "capturedGroupCount": 2,
+  "omittedCountGroups": 0,
+  "capturedArrayCounts": [
+    {
+      "kind": "cases",
+      "count": 4
+    }
+  ],
+  "limitations": [
+    "Raw samples, host hardware, runtime identity, captured model/AI payloads and duplicate per-file inventories remain only in private ignored originals.",
+    "Summary observations can overlap; do not add counts across suites, retries or historical releases.",
+    "SOURCE-MANIFEST.json is the only complete published source inventory."
+  ]
+}

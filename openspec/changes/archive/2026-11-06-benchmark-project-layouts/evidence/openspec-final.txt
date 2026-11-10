@@ -1,0 +1,14 @@
+✓ change/add-portable-windows-workspace
+✓ spec/architecture-snapshots
+✓ spec/branch-preview
+✓ spec/connection-diagnostics
+✓ spec/dataflow-trust
+✓ spec/drawio-roundtrip
+✓ spec/grounded-answers
+✓ spec/object-editing
+✓ spec/offline-drafts
+✓ spec/repository-layout-performance
+✓ spec/semantic-diff
+✓ spec/source-contradictions
+✓ spec/subgraph-focus
+Totals: 13 passed, 0 failed (13 items)

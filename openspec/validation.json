@@ -1,0 +1,25 @@
+{
+  "clientDate": "2026-11-05",
+  "masters": {
+    "command": "openspec validate --all --strict --no-interactive",
+    "passed": 11,
+    "failed": 0
+  },
+  "archivedTasks": {
+    "command": "openspec validate --archived --strict --no-interactive",
+    "passed": 1,
+    "failed": 0
+  },
+  "archivedDeltaStructure": {
+    "scope": "Official strict delta structure validation",
+    "valid": true,
+    "issues": [],
+    "summary": {
+      "errors": 0,
+      "warnings": 0,
+      "info": 0
+    }
+  },
+  "archive": "changes/archive/2026-11-05-add-architecture-workbench",
+  "activeChanges": 0
+}

@@ -1,0 +1,84 @@
+{
+  "format": "seaf-public-evidence-summary-v2",
+  "status": "recorded",
+  "release": "2.3.0",
+  "observedOn": "2026-11-10",
+  "scope": "Observed acceptance of the final relocated ZIP and its actual bundled modules. Live and functional publication closure is recorded separately in delivery-publication-acceptance.json.",
+  "countsAreNotAdditive": true,
+  "observedCounts": [
+    {
+      "group": "bundled-native",
+      "pass": 12,
+      "fail": 0
+    },
+    {
+      "group": "bundled-interactive-browser",
+      "pass": 17,
+      "fail": 0
+    },
+    {
+      "group": "bundled-compiled-portal",
+      "pass": 10,
+      "fail": 0
+    },
+    {
+      "group": "bundled-pure",
+      "pass": 61,
+      "fail": 0
+    },
+    {
+      "group": "bundled-launcher",
+      "pass": 8,
+      "fail": 0
+    },
+    {
+      "group": "bundled-ports",
+      "pass": 7,
+      "fail": 0
+    },
+    {
+      "group": "final-source-regression",
+      "pass": 221,
+      "fail": 0,
+      "skipped": 11
+    },
+    {
+      "group": "separate-telemetry-regression",
+      "pass": 10,
+      "fail": 0
+    },
+    {
+      "group": "pinned-openspec-strict",
+      "pass": 22,
+      "fail": 0
+    }
+  ],
+  "artifact": {
+    "name": "SEAF-Windows-x64-2.3.0.zip",
+    "bytes": 496039066,
+    "sha256": "a8edb8a7ea163b4310d6bf16622b4faa3b7ad988b828b4c9b4a2ee03f01e3379",
+    "manifestSha256": "7dd32eb90e8ad5591f5e2e7363383868de750989b0c3f90110cf2b9880edce2f",
+    "immutableFilesVerifiedAfterAllChecks": 76290,
+    "userDataIncluded": false
+  },
+  "observations": {
+    "bundledMcp": "PASS; isolated read-only registry",
+    "browserJavaScriptErrors": 0,
+    "browserExternalRequests": 0,
+    "mutationTestsUseDisposableProjects": true,
+    "offlineCleanBuild": true,
+    "independentSourceGitExcludesOldWorkspaceHistory": true,
+    "canonicalDocumentationSavedThroughMcp": true,
+    "mainShopflowReload": "updated; no problems",
+    "helloReload": "updated; no problems"
+  },
+  "notAcceptedHere": [
+    "Another physical computer or Windows 10",
+    "GitHub Releases binary upload"
+  ],
+  "limitations": [
+    "Suites overlap and their counts must not be added.",
+    "Detailed local receipts, models, credentials, paths and screenshots are excluded.",
+    "These 2.3.0 source-export/build results supersede the older 2.2.0 release gate only."
+  ]
+}

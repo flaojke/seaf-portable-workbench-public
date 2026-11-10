@@ -1,0 +1,357 @@
+components:
+  demo:
+    title: Учебные проекты
+    entity: component
+  demo.shop:
+    title: ShopFlow — интернет-магазин
+    entity: component
+    description: Учебная микросервисная система продажи товаров с резервированием
+      остатков и оплатой.
+    owner: Команда ShopFlow
+
+  demo.shop.web:
+    title: Веб-приложение
+    entity: component
+    kind: frontend
+    owner: Web Team
+    description: Каталог, корзина и отслеживание заказа в браузере покупателя.
+    technologies: [ TypeScript ]
+    links:
+      - id: demo.shop.gateway
+        title: HTTPS / JSON
+        direction: '-->'
+    trustZone: public
+  demo.shop.gateway:
+    title: API Gateway
+    entity: component
+    kind: gateway
+    owner: Platform Team
+    description: Единая точка входа; проверка JWT, маршрутизация и ограничение
+      частоты запросов.
+    technologies: [ NodeJS ]
+    links:
+      - {
+          id: demo.shop.identity,
+          title: OIDC / JWKS,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.catalog,
+          title: Каталог / REST,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.cart,
+          title: Корзина / REST,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.orders,
+          title: Заказы / REST,
+          direction: '-->'
+        }
+    trustZone: edge
+
+  demo.shop.catalog:
+    title: Catalog Service
+    entity: component
+    kind: microservice
+    owner: Catalog Team
+    description: Карточки товаров и цены; публичный поиск по каталогу.
+    technology: Node.js / TypeScript
+    technologies: [ NodeJS, TypeScript, PostgreSQL ]
+    aspects: [ demo.shop.commerce ]
+    links:
+      - {
+          id: demo.shop.catalog_db,
+          title: Товары и цены / SQL,
+          direction: '-->'
+        }
+  demo.shop.cart:
+    title: Cart Service
+    entity: component
+    kind: microservice
+    owner: Checkout Team
+    description: Временная корзина покупателя; позиции, количество и срок жизни корзины.
+    technology: Node.js / TypeScript
+    technologies: [ NodeJS, TypeScript, Redis ]
+    aspects: [ demo.shop.commerce ]
+    links:
+      - {
+          id: demo.shop.cart_cache,
+          title: Корзины с TTL / Redis,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.catalog,
+          title: Проверка товара / REST,
+          direction: '-->'
+        }
+  demo.shop.orders:
+    title: Order Service
+    entity: component
+    kind: microservice
+    owner: Checkout Team
+    description: Жизненный цикл заказа, оркестрация резервирования и оплаты; выдача
+      снимка подтверждённого заказа и учёт созданной заявки на доставку.
+    technology: Node.js / TypeScript
+    technologies: [ NodeJS, TypeScript, PostgreSQL, RabbitMQ ]
+    aspects: [ demo.shop.commerce, demo.shop.reliability ]
+    links:
+      - {
+          id: demo.shop.orders_db,
+          title: Заказы и outbox / SQL,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.cart,
+          title: Снимок корзины / REST,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.catalog,
+          title: Проверка актуальных цен / REST,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.inventory,
+          title: Резерв и снятие резерва / REST,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.payments,
+          title: Запуск оплаты / REST,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.events,
+          title: OrderConfirmed / OrderCancelled,
+          direction: '-->'
+        }
+    trustZone: internal
+    dataClassification: confidential
+  demo.shop.payments:
+    title: Payment Service
+    entity: component
+    kind: microservice
+    owner: Payments Team
+    description: Идемпотентные платежи, обработка callback провайдера и события
+      результата оплаты.
+    technology: Node.js / TypeScript
+    technologies: [ NodeJS, TypeScript, PostgreSQL, RabbitMQ ]
+    aspects: [ demo.shop.security, demo.shop.reliability ]
+    links:
+      - {
+          id: demo.shop.payments_db,
+          title: Платежи и outbox / SQL,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.payment_provider,
+          title: HTTPS / ключ идемпотентности,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.events,
+          title: PaymentCaptured / PaymentFailed,
+          direction: '-->'
+        }
+  demo.shop.inventory:
+    title: Inventory Service
+    entity: component
+    kind: microservice
+    owner: Fulfilment Team
+    description: Остатки, атомарный резерв товаров и освобождение резерва при отмене заказа.
+    technology: Node.js / TypeScript
+    technologies: [ NodeJS, TypeScript, PostgreSQL ]
+    aspects: [ demo.shop.commerce, demo.shop.reliability ]
+    links:
+      - {
+          id: demo.shop.inventory_db,
+          title: Остатки и резервы / SQL,
+          direction: '-->'
+        }
+  demo.shop.notifications:
+    title: Notification Service
+    entity: component
+    kind: microservice
+    owner: Customer Experience Team
+    description: Уведомления о подтверждении и отмене заказа, создании заявки на
+      доставку; журнал обработанных событий и повторные попытки.
+    technology: Node.js / TypeScript
+    technologies: [ NodeJS, TypeScript, PostgreSQL, RabbitMQ ]
+    aspects: [ demo.shop.reliability ]
+    links:
+      - {
+          id: demo.shop.notifications_db,
+          title: Журнал доставки / SQL,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.email_provider,
+          title: Отправка уведомления / HTTPS,
+          direction: '-->'
+        }
+    trustZone: internal
+
+  demo.shop.events:
+    title: Event Broker
+    entity: queue
+    kind: infrastructure
+    owner: Platform Team
+    description: RabbitMQ; доставка событий как минимум один раз, отдельные очереди
+      потребителей и DLQ.
+    technologies: [ RabbitMQ ]
+    links:
+      - {
+          id: demo.shop.orders,
+          title: Результат оплаты и ShipmentCreated / AMQP,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.notifications,
+          title: Результат заказа и ShipmentCreated / AMQP,
+          direction: '-->'
+        }
+      - {
+          id: demo.shop.delivery,
+          title: OrderConfirmed / AMQP,
+          direction: '-->'
+        }
+    trustZone: internal
+  demo.shop.identity:
+    title: Identity Provider
+    entity: component
+    kind: infrastructure
+    owner: Platform Team
+    description: OIDC-провайдер выдаёт токены; шлюз проверяет подпись по JWKS без
+      запроса на каждый API-вызов.
+    technologies: [ Keycloak ]
+    aspects: [ demo.shop.security ]
+  demo.shop.catalog_db:
+    title: Catalog DB
+    entity: database
+    kind: database
+    owner: Catalog Team
+    description: Отдельное логическое хранилище каталога; доступ только у Catalog Service.
+    technologies: [ PostgreSQL ]
+  demo.shop.orders_db:
+    title: Orders DB
+    entity: database
+    kind: database
+    owner: Checkout Team
+    description: Отдельное логическое хранилище заказов, состояния саги и
+      transactional outbox.
+    technologies: [ PostgreSQL ]
+    trustZone: internal
+  demo.shop.payments_db:
+    title: Payments DB
+    entity: database
+    kind: database
+    owner: Payments Team
+    description: Отдельное хранилище платежей, ключей идемпотентности и
+      transactional outbox.
+    technologies: [ PostgreSQL ]
+  demo.shop.inventory_db:
+    title: Inventory DB
+    entity: database
+    kind: database
+    owner: Fulfilment Team
+    description: Отдельное хранилище остатков и резервов; исключает двойное резервирование.
+    technologies: [ PostgreSQL ]
+  demo.shop.notifications_db:
+    title: Notifications DB
+    entity: database
+    kind: database
+    owner: Customer Experience Team
+    description: Журнал eventId, статусов доставки и попыток отправки уведомлений.
+    technologies: [ PostgreSQL ]
+  demo.shop.cart_cache:
+    title: Cart Store
+    entity: database
+    kind: database
+    owner: Checkout Team
+    description: Redis для временных корзин с TTL; финальная цена фиксируется при
+      оформлении заказа.
+    technologies: [ Redis ]
+  demo.shop.payment_provider:
+    title: Платёжный провайдер
+    entity: cloud
+    kind: external
+    owner: Внешний поставщик
+    description: Условный внешний сервис оплаты. В проекте описан только его
+      архитектурный контракт.
+  demo.shop.email_provider:
+    title: Провайдер уведомлений
+    entity: cloud
+    kind: external
+    owner: Внешний поставщик
+    description: Условный внешний сервис доставки писем с поддержкой идемпотентного
+      запроса по eventId.
+
+  demo.shop.delivery:
+    title: Delivery Service
+    entity: component
+    kind: microservice
+    owner: Logistics
+    description: Создание заявок на доставку подтверждённых заказов; дедупликация по
+      orderId, журнал событий и повторные попытки.
+    technology: Node.js / TypeScript
+    technologies:
+      - NodeJS
+      - TypeScript
+      - PostgreSQL
+      - RabbitMQ
+    aspects:
+      - demo.shop.commerce
+      - demo.shop.reliability
+    links:
+      - id: demo.shop.orders
+        title: Данные подтверждённого заказа / REST
+        direction: -->
+        protocol: HTTPS
+        dataClassification: confidential
+        encrypted: true
+      - id: demo.shop.delivery_db
+        title: Заявки, inbox и outbox / SQL
+        direction: -->
+        protocol: PostgreSQL/TLS
+        dataClassification: confidential
+        encrypted: true
+      - id: demo.shop.events
+        title: ShipmentCreated / AMQP
+        direction: -->
+        protocol: AMQP/TLS
+        dataClassification: internal
+        encrypted: true
+    trustZone: logistics
+    dataClassification: confidential
+  demo.shop.delivery_db:
+    title: Delivery DB
+    entity: database
+    kind: database
+    owner: Logistics
+    description: Заявки на доставку с уникальным orderId, обработанные eventId,
+      состояния повторных попыток и transactional outbox; доступ только у
+      Delivery Service.
+    technologies:
+      - PostgreSQL
+    trustZone: logistics
+    dataClassification: confidential
+
+aspects:
+  demo:
+    title: Учебные проекты
+    location: ShopFlow/Аспекты
+  demo.shop:
+    title: ShopFlow
+    location: ShopFlow/Аспекты/ShopFlow
+  demo.shop.commerce:
+    title: Оформление покупки
+    location: ShopFlow/Аспекты/Оформление покупки
+  demo.shop.security:
+    title: Идентификация и защита платежей
+    location: ShopFlow/Аспекты/Безопасность
+  demo.shop.reliability:
+    title: Устойчивость и согласованность
+    location: ShopFlow/Аспекты/Устойчивость

@@ -1,0 +1,25 @@
+{
+  "name": "dochub-plugin-dbml",
+  "version": "1.0.0",
+  "description": "dbml document",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "I.Sabirzyanov",
+  "contributors": [
+    {
+      "name": "Ilyas Sabirzyanov",
+      "company": "Sber"
+    }
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.25",
+    "@types/react-dom": "18.3.5"
+  }
+}

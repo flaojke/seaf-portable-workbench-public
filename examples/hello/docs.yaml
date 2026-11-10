@@ -1,0 +1,126 @@
+docs:
+  demo.hello.overview:
+    title: Hello — начало работы
+    location: Примеры/Hello/Начало работы
+    type: markdown
+    source: README.md
+  demo.hello.l2.c4:
+    title: Hello — C4 L2
+    location: Примеры/Hello/C4 L2
+    type: plantuml
+    source: diagrams/l2.puml
+  local.lsv.editor:
+    title: Редактор объектов и потоков
+    location: Доработки LSV/18. Редактор
+    type: markdown
+    toc: true
+    source: docs/lsv/object-editor.md
+  local.lsv.stack:
+    title: "Stack views: контекст, потоки и размещение"
+    location: Доработки LSV/Stack views
+    type: markdown
+    toc: true
+    source: docs/lsv/stack-views.md
+  local.lsv.usability:
+    title: 00. Обзор улучшений удобства
+    location: Доработки LSV/20. Удобство работы/00. Обзор
+    type: markdown
+    toc: true
+    source: docs/lsv/usability.md
+  local.lsv.usability.search:
+    title: 01. Поиск и команды
+    location: Доработки LSV/20. Удобство работы/01. Поиск и команды
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-search.md
+  local.lsv.usability.catalog:
+    title: 02. Реестры больших моделей
+    location: Доработки LSV/20. Удобство работы/02. Реестры
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-catalog.md
+  local.lsv.usability.issues:
+    title: 03. Проверки и исправления
+    location: Доработки LSV/20. Удобство работы/03. Проверки
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-issues.md
+  local.lsv.usability.passport:
+    title: 04. Паспорт объекта
+    location: Доработки LSV/20. Удобство работы/04. Паспорт объекта
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-passport.md
+  local.lsv.usability.context:
+    title: 05. Проект и состояние сохранения
+    location: Доработки LSV/20. Удобство работы/05. Контекст проекта
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-context.md
+  local.lsv.usability.autosave:
+    title: 06. Автосохранение и отмена
+    location: Доработки LSV/20. Удобство работы/06. Автосохранение
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-autosave.md
+  local.lsv.usability.wizard:
+    title: 07. Мастер создания системы
+    location: Доработки LSV/20. Удобство работы/07. Мастер системы
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-wizard.md
+  local.lsv.usability.navigation:
+    title: 08. Избранное и точные ссылки
+    location: Доработки LSV/20. Удобство работы/08. Навигация
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-navigation.md
+  local.lsv.usability.scenarios:
+    title: 09. Пошаговые сценарии
+    location: Доработки LSV/20. Удобство работы/09. Сценарии
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-scenarios.md
+  local.lsv.usability.forms:
+    title: 10. Понятные доступные формы
+    location: Доработки LSV/20. Удобство работы/10. Формы
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-forms.md
+  local.lsv.composer:
+    title: Конструктор архитектурных схем
+    location: Доработки LSV/21. Конструктор схем
+    type: markdown
+    toc: true
+    source: docs/lsv/diagram-composer.md
+  local.projects.workspace:
+    title: Проекты
+    location: /Проекты/Управление проектами
+    type: lsv-workbench
+    view: projects
+  local.editor.workspace:
+    title: Редактор
+    location: /Редактор/Объекты и потоки
+    type: lsv-workbench
+    view: editor
+  local.home.workspace:
+    title: Моя работа
+    location: /Моя работа/Обзор
+    type: lsv-workbench
+    view: home
+  local.composer.workspace:
+    title: Конструктор схем
+    location: /Схемы/Конструктор
+    type: lsv-workbench
+    view: composer
+  local.scenarios.workspace:
+    title: Сценарии взаимодействия
+    location: /Схемы/Сценарии взаимодействия
+    type: lsv-workbench
+    view: scenarios
+  local.lsv.diagram-editor:
+    title: Интерактивный редактор схем 2.3
+    location: Доработки LSV/22. Интерактивный редактор схем
+    type: markdown
+    toc: true
+    source: docs/lsv/diagram-editor.md

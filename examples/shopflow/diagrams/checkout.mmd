@@ -1,0 +1,54 @@
+sequenceDiagram
+    autonumber
+    actor Buyer as Покупатель
+    participant G as API Gateway
+    participant O as Order Service
+    participant C as Cart / Catalog
+    participant I as Inventory Service
+    participant P as Payment Service
+    participant Bank as Платёжный провайдер
+    participant B as Event Broker
+    participant D as Delivery Service (Logistics)
+    participant DB as Delivery DB
+    participant N as Notification Service
+    Buyer->>G: POST /orders + Idempotency-Key
+    G->>O: Проверенный запрос
+    O->>C: Корзина и актуальные цены
+    C-->>O: Снимок позиций
+    Note over O: Сохранить PENDING
+    O->>I: Резерв по orderId
+    I-->>O: Резерв создан
+    O->>P: Создать платёж
+    P->>Bank: Оплата с ключом идемпотентности
+    O-->>G: 202 Accepted + orderId
+    G-->>Buyer: Заказ обрабатывается
+    Bank-->>P: Подписанный callback
+    Note over P: Платёж + outbox одной транзакцией
+    P-->>B: PaymentCaptured или PaymentFailed
+    B-->>O: Результат оплаты
+    alt Оплата подтверждена
+        Note over O: CONFIRMED + SHIPMENT_PENDING + outbox одной транзакцией
+        O-->>B: OrderConfirmed
+        B-->>N: OrderConfirmed
+        N-->>Buyer: Подтверждение заказа
+        B-->>D: OrderConfirmed (отдельная очередь)
+        Note over D: Дедупликация eventId, уникальный orderId
+        D->>O: GET подтверждённого заказа по orderId
+        O-->>D: Снимок заказа и данные доставки
+        D->>DB: Заявка + inbox + outbox одной транзакцией
+        DB-->>D: Сохранено
+        D-->>B: ShipmentCreated (outbox relay)
+        B-->>O: ShipmentCreated
+        Note over O: SHIPMENT_CREATED, заказ остаётся CONFIRMED
+        B-->>N: ShipmentCreated
+        N-->>Buyer: Заявка на доставку создана
+        Note over D,DB: При техническом сбое — retry/DLQ, заказ не отменяется
+    else Оплата отклонена
+        O->>I: Снять резерв по orderId
+        I-->>O: Резерв освобождён
+        Note over O: CANCELLED + outbox одной транзакцией
+        Note over D: Нет OrderConfirmed — доставка не создаётся
+        O-->>B: OrderCancelled
+        B-->>N: OrderCancelled
+        N-->>Buyer: Уведомление об отмене
+    end

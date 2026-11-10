@@ -1,0 +1,129 @@
+/*
+  Copyright (C) 2026 Sber
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Maintainers:
+      Konstantin Myachin <kvmyachin@gmail.com>, Sber
+
+  Contributors:
+      Konstantin Myachin <kvmyachin@gmail.com>, Sber - 2026
+*/
+
+/*
+  Общие стили диалогов. Цвета — из общей палитры представлений (presentation.css).
+
+  Разметка:
+    v-dialog
+      v-card.dh-dialog
+        header.dh-dialog__header
+          h2.dh-dialog__title
+          v-btn.dh-dialog__close           — крестик; только у окон, которые можно закрыть без потери данных
+        div.dh-dialog__body                — содержимое; .dh-dialog__text — пояснение
+        footer.dh-dialog__footer           — кнопки справа: второстепенные слева, основное действие последним
+          v-btn.dh-dialog__btn  variant="text"                   — второстепенное («Отменить», «Вернуться»)
+          v-btn.dh-dialog__btn  color="primary" variant="flat"   — основное («Сохранить»)
+          v-btn.dh-dialog__btn.dh-dialog__btn--danger variant="flat" — разрушительное основное
+                                                                   («Отменить и продолжить»)
+*/
+.dh-dialog.v-card {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  overflow: hidden;
+  border: 1px solid var(--dh-border);
+  border-radius: calc(var(--dh-radius) + 4px);
+  background: var(--dh-surface);
+  box-shadow: var(--dh-shadow-overlay);
+  color: var(--dh-text);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.dh-dialog__header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px 12px 8px 20px;
+}
+
+.dh-dialog__title {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 4px 0 0;
+  color: var(--dh-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  overflow-wrap: anywhere;
+}
+
+.dh-dialog__close.v-btn {
+  flex: 0 0 auto;
+  color: var(--dh-text-muted);
+}
+
+.dh-dialog__close.v-btn:hover {
+  color: var(--dh-text);
+}
+
+.dh-dialog__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 4px 20px 16px;
+  overflow: auto;
+}
+
+.dh-dialog__text {
+  margin: 0 0 12px;
+  color: var(--dh-text-secondary);
+}
+
+.dh-dialog__text:last-child {
+  margin-bottom: 0;
+}
+
+.dh-dialog__footer {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 20px 16px;
+  border-top: 1px solid var(--dh-border);
+}
+
+.dh-dialog__btn.v-btn {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: var(--dh-radius);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.dh-dialog__btn.v-btn--variant-text {
+  color: var(--dh-text-secondary);
+}
+
+.dh-dialog__btn.v-btn--variant-text:hover {
+  color: var(--dh-text);
+}
+
+.dh-dialog__btn--danger.v-btn {
+  background: var(--dh-danger);
+  color: var(--dh-on-primary);
+}

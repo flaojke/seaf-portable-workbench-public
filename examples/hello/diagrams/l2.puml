@@ -1,0 +1,10 @@
+@startuml
+!include <C4/C4_Container>
+System_Boundary(hello, "Hello") {
+  Container(web, "Web App", "Browser", "UI")
+  Container(api, "API Service", "Node.js", "Business operations")
+  ContainerDb(db, "Database", "PostgreSQL", "Data")
+}
+Rel(web, api, "HTTPS")
+Rel(api, db, "SQL")
+@enduml

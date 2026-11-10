@@ -1,0 +1,103 @@
+{
+  "format": "seaf-public-evidence-summary-v2",
+  "status": "PASS",
+  "scope": "Curated historical observations; no new test execution or additional acceptance is asserted.",
+  "countsAreNotAdditive": true,
+  "observedStates": {
+    "PASS": 275
+  },
+  "observedCounts": [
+    {
+      "group": 1,
+      "total": 15,
+      "pass": 15,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "group": 2,
+      "total": 156,
+      "pass": 148,
+      "fail": 0,
+      "skipped": 8
+    },
+    {
+      "group": 3,
+      "total": 9,
+      "pass": 9,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "group": 4,
+      "total": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "group": 5,
+      "total": 10,
+      "pass": 10,
+      "fail": 0,
+      "skipped": 0
+    }
+  ],
+  "capturedGroupCount": 5,
+  "omittedCountGroups": 0,
+  "capturedArrayCounts": [
+    {
+      "kind": "checks",
+      "count": 15
+    },
+    {
+      "kind": "checks",
+      "count": 16
+    },
+    {
+      "kind": "checks",
+      "count": 12
+    },
+    {
+      "kind": "checks",
+      "count": 8
+    },
+    {
+      "kind": "checks",
+      "count": 7
+    },
+    {
+      "kind": "checks",
+      "count": 13
+    },
+    {
+      "kind": "checks",
+      "count": 8
+    },
+    {
+      "kind": "checks",
+      "count": 156
+    },
+    {
+      "kind": "checks",
+      "count": 9
+    },
+    {
+      "kind": "checks",
+      "count": 9
+    },
+    {
+      "kind": "checks",
+      "count": 7
+    },
+    {
+      "kind": "checks",
+      "count": 10
+    }
+  ],
+  "limitations": [
+    "Raw samples, host hardware, runtime identity, captured model/AI payloads and duplicate per-file inventories remain only in private ignored originals.",
+    "Summary observations can overlap; do not add counts across suites, retries or historical releases.",
+    "SOURCE-MANIFEST.json is the only complete published source inventory."
+  ]
+}

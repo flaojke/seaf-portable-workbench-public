@@ -1,0 +1,48 @@
+docs:
+  archtool.plugins.editable-table.search.global_search.table:
+    type: editable-table
+    global_search: true       # Включаем поле глобального поиска
+    selection: true           # Чекбоксы выбора строк ("Выбрать все" работает по найденным строкам)
+    excel_export_filter: true # Выгрузка в Excel учитывает фильтры, поиск и сортировку
+    page_size: 5
+
+    origin:
+      body: >
+        ($."archtool.plugins.editable-table.search.global_search.data")
+
+    headers:
+      - value: name
+        text: Название
+        width: 220px
+
+      - value: status
+        text: Статус
+        type: select
+        width: 140px
+        options:
+          - value: opt_1
+            text: Активен
+          - value: opt_2
+            text: Выведен
+          - value: opt_3
+            text: В разработке
+
+      - value: tags
+        text: Метки
+        type: multiple-select
+        width: 220px
+        options:
+          - value: payments
+            text: Платежи
+          - value: reporting
+            text: Отчётность
+          - value: core
+            text: Ядро
+
+      - value: links
+        text: Ссылки
+        type: link
+        width: 160px
+
+    source: >
+      ({ "body": body })

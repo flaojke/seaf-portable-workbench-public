@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SEAF-Portable</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <div>
+          <strong>SEAF-Portable</strong
+          ><small>SEAF · Доработки LSV</small>
+        </div>
+      </div>
+      <div class="project-field">
+        <label for="project">Проект</label
+        ><select id="project" aria-label="Проект"></select>
+      </div>
+      <span id="connection" class="badge">Подключение…</span>
+      <button
+        id="search-open"
+        class="secondary"
+        type="button"
+        aria-keyshortcuts="Control+k Meta+k"
+        title="Найти объект, документ или команду (Ctrl+K)"
+      >
+        Поиск <kbd>Ctrl K</kbd>
+      </button>
+      <button id="reconnect" class="secondary" type="button">Обновить</button>
+    </header>
+    <section
+      id="project-context"
+      class="context-bar"
+      aria-label="Текущий проект и состояние изменений"
+      aria-live="polite"
+    ></section>
+    <div id="offline-banner" class="offline-banner" hidden>
+      Сервис недоступен. Доступны сохранённая модель и локальные черновики.
+      Проверка, Git и обновление SEAF выполнятся после подключения.
+    </div>
+    <div class="shell">
+      <nav id="navigation" aria-label="Разделы рабочего пространства"></nav>
+      <main id="main" tabindex="-1"></main>
+    </div>
+    <div
+      id="notice"
+      class="notice"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></div>
+    <dialog id="result-dialog">
+      <div class="dialog-head">
+        <h2 id="dialog-title">Результат</h2>
+        <button id="dialog-close" class="icon-button" aria-label="Закрыть">
+          ×
+        </button>
+      </div>
+      <pre id="dialog-result"></pre>
+      <a id="dialog-link" class="button" target="_blank" rel="noopener" hidden
+        >Открыть портал preview</a
+      >
+    </dialog>
+    <dialog
+      id="search-dialog"
+      class="search-dialog"
+      aria-labelledby="search-title"
+    >
+      <div class="dialog-head">
+        <h2 id="search-title">Поиск по архитектуре и команды</h2>
+        <button
+          id="search-close"
+          class="icon-button"
+          aria-label="Закрыть поиск"
+        >
+          ×
+        </button>
+      </div>
+      <label for="global-search"
+        >Объект, документ, владелец или действие в текущем проекте</label
+      >
+      <input
+        id="global-search"
+        type="search"
+        autocomplete="off"
+        placeholder="Например, Delivery или создать систему"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-controls="search-results"
+        aria-expanded="true"
+      />
+      <p id="search-status" class="subtle small" role="status">
+        Введите название или идентификатор. ↑ ↓ — выбрать, Enter — открыть, Esc
+        — закрыть.
+      </p>
+      <div
+        id="search-results"
+        role="listbox"
+        aria-label="Результаты поиска"
+      ></div>
+    </dialog>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

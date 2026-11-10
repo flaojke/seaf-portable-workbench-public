@@ -1,0 +1,305 @@
+{
+  "format": "seaf-public-evidence-summary-v2",
+  "status": "passed",
+  "scope": "Curated historical observations; no new test execution or additional acceptance is asserted.",
+  "countsAreNotAdditive": true,
+  "observedStates": {
+    "passed": 15
+  },
+  "observedCounts": [
+    {
+      "group": 1,
+      "integrations": 3000
+    },
+    {
+      "group": 2,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 3,
+      "integrations": 3000
+    },
+    {
+      "group": 4,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 5,
+      "integrations": 3000
+    },
+    {
+      "group": 6,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 7,
+      "integrations": 3000
+    },
+    {
+      "group": 8,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 9,
+      "integrations": 3000
+    },
+    {
+      "group": 10,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 11,
+      "integrations": 3000
+    },
+    {
+      "group": 12,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 13,
+      "integrations": 3000
+    },
+    {
+      "group": 14,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 15,
+      "integrations": 9000
+    },
+    {
+      "group": 16,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 17,
+      "integrations": 9000
+    },
+    {
+      "group": 18,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 19,
+      "integrations": 9000
+    },
+    {
+      "group": 20,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 21,
+      "integrations": 9000
+    },
+    {
+      "group": 22,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 23,
+      "integrations": 9000
+    },
+    {
+      "group": 24,
+      "systems": 3000,
+      "integrations": 9000
+    }
+  ],
+  "capturedGroupCount": 28,
+  "omittedCountGroups": 4,
+  "capturedArrayCounts": [
+    {
+      "kind": "results",
+      "count": 14
+    },
+    {
+      "kind": "samples",
+      "count": 5
+    },
+    {
+      "kind": "files",
+      "count": 6
+    },
+    {
+      "kind": "samples",
+      "count": 5
+    },
+    {
+      "kind": "files",
+      "count": 6
+    },
+    {
+      "kind": "samples",
+      "count": 5
+    },
+    {
+      "kind": "files",
+      "count": 6
+    },
+    {
+      "kind": "samples",
+      "count": 5
+    },
+    {
+      "kind": "files",
+      "count": 6
+    },
+    {
+      "kind": "samples",
+      "count": 5
+    },
+    {
+      "kind": "files",
+      "count": 6
+    },
+    {
+      "kind": "samples",
+      "count": 5
+    }
+  ],
+  "limitations": [
+    "Raw samples, host hardware, runtime identity, captured model/AI payloads and duplicate per-file inventories remain only in private ignored originals.",
+    "Summary observations can overlap; do not add counts across suites, retries or historical releases.",
+    "SOURCE-MANIFEST.json is the only complete published source inventory."
+  ],
+  "productionWrites": false,
+  "aggregates": [
+    {
+      "N": 1000,
+      "layout": "baseline",
+      "sampleCount": 5,
+      "medianMs": 4.196799999999712,
+      "sourceBytes": 798345,
+      "characters": 699345,
+      "mcpReadLimitExceeded": true
+    },
+    {
+      "N": 1000,
+      "layout": "v1",
+      "sampleCount": 5,
+      "medianMs": 2.265400000000227,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 1000,
+      "layout": "v2",
+      "sampleCount": 5,
+      "medianMs": 1.4143000000003667,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 1000,
+      "layout": "v3",
+      "sampleCount": 5,
+      "medianMs": 1.6075000000000728,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 1000,
+      "layout": "v4",
+      "sampleCount": 5,
+      "medianMs": 1.49029999999766,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 1000,
+      "layout": "v5",
+      "sampleCount": 5,
+      "medianMs": 1.566899999997986,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 1000,
+      "layout": "v6",
+      "sampleCount": 5,
+      "medianMs": 1.7658999999985099,
+      "sourceBytes": 15979,
+      "characters": 13999,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 3000,
+      "layout": "baseline",
+      "sampleCount": 5,
+      "medianMs": 9.452400000001944,
+      "sourceBytes": 2395012,
+      "characters": 2098012,
+      "mcpReadLimitExceeded": true
+    },
+    {
+      "N": 3000,
+      "layout": "v1",
+      "sampleCount": 5,
+      "medianMs": 1.2938999999969383,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 3000,
+      "layout": "v2",
+      "sampleCount": 5,
+      "medianMs": 1.4923999999882653,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 3000,
+      "layout": "v3",
+      "sampleCount": 5,
+      "medianMs": 1.5521999999909895,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 3000,
+      "layout": "v4",
+      "sampleCount": 5,
+      "medianMs": 1.7299000000057276,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 3000,
+      "layout": "v5",
+      "sampleCount": 5,
+      "medianMs": 1.3663999999989755,
+      "sourceBytes": 810,
+      "characters": 711,
+      "mcpReadLimitExceeded": false
+    },
+    {
+      "N": 3000,
+      "layout": "v6",
+      "sampleCount": 5,
+      "medianMs": 1.5632000000041444,
+      "sourceBytes": 15979,
+      "characters": 13999,
+      "mcpReadLimitExceeded": false
+    }
+  ]
+}

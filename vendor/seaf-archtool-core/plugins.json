@@ -1,0 +1,174 @@
+[
+    {
+        "id": "html",
+        "documents": [
+            "html"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/html"
+        }
+    },
+    {
+        "id": "markaper",
+        "documents": [
+            "mkr-grid",
+            "mkr-select",
+            "mkr-tree",
+            "mkr-tabs"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/markaper"
+        }
+    },
+    {
+        "id": "charts",
+        "documents": [
+            "chart-radar",
+            "chart-bar",
+            "chart-bubble",
+            "chart-doughnut",
+            "chart-line",
+            "chart-pie",
+            "chart-polararea",
+            "chart-scatter"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/charts"
+        }
+    },
+    {
+        "id": "devtool",
+        "documents": [
+            "devtool"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/devtool"
+        }
+    },
+    {
+        "id": "svg",
+        "documents": [
+            "svg"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/svg"
+        }
+    },
+    {
+        "id": "bpmnjs",
+        "documents": [
+            "bpmnjs"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/bpmnjs"
+        }
+    },
+    {
+        "id": "drawio",
+        "documents": [
+            "drawio"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/drawio"
+        }
+    },
+    {
+        "id": "editable-table",
+        "documents": [
+            "editable-table"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/editable-table"
+        }
+    },
+    {
+        "id": "arch-formater",
+        "documents": [
+            "arch-formater"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/arch-formater"
+        }
+    },
+    {
+        "id": "meta-integration",
+        "documents": [
+            "meta-import",
+            "meta-export"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/meta-integration"
+        }
+    },
+    {
+        "id": "s3-integration",
+        "documents": [
+            "s3-integration"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/s3-integration"
+        }
+    },
+    {
+        "id": "excel",
+        "documents": [
+            "excel-export",
+            "excel-import"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/excel"
+        }
+    },
+    {
+        "id": "dbml",
+        "documents": [
+            "dbml"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/dbml"
+        }
+    },
+    {
+        "id": "gigachat",
+        "documents": [
+            "ai-chat"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/gigachat"
+        }
+    },
+    {
+        "id": "seaf2drawiojs",
+        "documents": [
+            "seaf2drawio"
+        ],
+        "source": {
+            "type": "local",
+            "location": "plugins/seaf2drawiojs"
+        }
+    },
+    {
+        "source": {
+            "type": "local",
+            "location": "plugins/lsv-workbench"
+        },
+        "documents": [
+            "lsv-workbench"
+        ],
+        "id": "lsv-workbench"
+    }
+]

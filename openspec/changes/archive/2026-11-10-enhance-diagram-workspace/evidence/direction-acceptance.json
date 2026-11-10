@@ -1,0 +1,83 @@
+{
+  "format": "seaf-interactive-diagram-direction-evidence-v1",
+  "status": "PASS",
+  "observedAt": "2026-11-10T18:06:06.586Z",
+  "scope": "Current source backend and actual pinned Mermaid parser; final browser and 2.3 relocated/native release gates remain separate.",
+  "sourceReceipts": [
+    "seaf-mcp/state/diagram-editing-unit-2.3.0.tap",
+    "seaf-mcp/state/diagram-direction-parser-2.3.0.json"
+  ],
+  "focusedRegression": {
+    "tests": 49,
+    "pass": 49,
+    "fail": 0,
+    "skip": 0,
+    "supersedesFocusedUnitCount": 47
+  },
+  "diagramDirections": [
+    "directed",
+    "reverse",
+    "bidirectional",
+    "undirected"
+  ],
+  "modelArrows": [
+    {
+      "source": "-->",
+      "diagram": "directed"
+    },
+    {
+      "source": "<--",
+      "diagram": "reverse"
+    },
+    {
+      "source": "<->",
+      "diagram": "bidirectional"
+    },
+    {
+      "source": "--",
+      "diagram": "undirected"
+    }
+  ],
+  "parser": {
+    "version": "11.16.1",
+    "checks": [
+      {
+        "direction": "directed",
+        "status": "PASS"
+      },
+      {
+        "direction": "reverse",
+        "status": "PASS"
+      },
+      {
+        "direction": "bidirectional",
+        "status": "PASS"
+      },
+      {
+        "direction": "undirected",
+        "status": "PASS"
+      }
+    ],
+    "completedAt": "2026-11-10T18:05:04.716Z",
+    "reverseRepresentation": "Swapped generated node aliases with a forward arrow; model owner and persisted endpoints unchanged."
+  },
+  "checks": [
+    "SVG uses correctly oriented start and end markers for four directions.",
+    "Supported source-model arrows map without changing stored owner or endpoint identities.",
+    "A bound interaction with a known mismatched arrow is rejected before staging.",
+    "Unsupported model arrows remain unchanged and produce a visible warning.",
+    "Invalid diagram arrow values and types are rejected.",
+    "Old directed and undirected diagram definitions remain valid.",
+    "Actual generated Markdown/Mermaid text parses with the pinned portal parser for all four directions."
+  ],
+  "productionModelWrites": false,
+  "sourceSha256": {
+    "seaf-mcp/workbench/diagram-composer.mjs": "4e9be2025eed819355debac4fa4f2f36a6cbfe58317eda35c7baf3c4c7a05893",
+    "seaf-mcp/workbench/diagram-editing.mjs": "ddc49df470de5235996ab6b93a0204d3ac918c70b403f997d9470b8541f0db8c"
+  },
+  "limitations": [
+    "Mermaid 11.16.1 rejects a bare left-pointing link, so reverse output swaps generated aliases and uses a forward arrow; source and saved diagram identities do not change.",
+    "This source followup does not assert that a rebuilt 2.3 distribution, browser acceptance, deployment or remote publication has completed."
+  ],
+  "privacy": "Only counters, check descriptions, supported direction values, relative receipt paths and file digests; no local absolute paths or raw source models."
+}

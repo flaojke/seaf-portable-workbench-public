@@ -1,0 +1,3 @@
+imports:
+  - architecture.yaml
+  - docs.yaml

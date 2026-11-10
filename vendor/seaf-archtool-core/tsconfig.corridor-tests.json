@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "//": "Checks the corridor router, focused corridor tests, and their helper for implicit any types.",
+  "compilerOptions": {
+    "strict": false,
+    "allowJs": false,
+    "noImplicitAny": true
+  },
+  "include": [
+    "tests/seaf2drawiojs/corridor-*.test.ts",
+    "tests/seaf2drawiojs/routing-test-helpers.ts",
+    "plugins/seaf2drawiojs/lib/corridor-routing.ts"
+  ]
+}

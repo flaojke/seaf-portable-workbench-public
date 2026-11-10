@@ -1,0 +1,19 @@
+{
+  "repository": "https://gitverse.ru/seafteam/seaf-archtool-core.git",
+  "commit": "3f77aaacee390d36ea517a910418e0a6c7a6f500",
+  "version": "2026.33.0",
+  "upstreamBase": "c928383e599565533ecd76f90765691bc5a73704",
+  "localCommits": [
+    "9669b513205bc003534da32b13d47517d9b0c150",
+    "ccc4a0119514bcc4a73d7d860abfb3739fd543ac",
+    "3f77aaacee390d36ea517a910418e0a6c7a6f500"
+  ],
+  "trackedFiles": 1483,
+  "forkChanges": [
+    "2.2.0: local portal-wide architecture search and direct Home/Composer/Scenarios menu entries",
+    "2.2.0: trusted local Workbench frame views and confirmation dialog support",
+    "2.2.0: optional telemetry is lazy and explicit opt-in; portable builds force it off",
+    "Source distribution: disabled telemetry interface; unavailable external import and development proxies; LSV identifiers; generated documentation illustration."
+  ],
+  "notice": "Vendored source retains upstream LICENSE and NOTICE. Native Windows changes are maintained in this repository."
+}

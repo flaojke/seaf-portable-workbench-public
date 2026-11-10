@@ -1,0 +1,219 @@
+/*
+  Copyright (C) 2026 Sber
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Maintainers:
+      Konstantin Myachin <kvmyachin@gmail.com>, Sber
+
+  Contributors:
+      Konstantin Myachin <kvmyachin@gmail.com>, Sber - 2026
+*/
+
+/*
+  Общие стили плашек (ошибка, предупреждение, успех, сведения). Цвета — из общей палитры
+  представлений (presentation.css).
+
+  Разметка:
+    v-alert.dh-alert.dh-alert--error   icon="mdi-alert-circle-outline"
+    v-alert.dh-alert.dh-alert--warning icon="mdi-alert-outline"
+    v-alert.dh-alert.dh-alert--success icon="mdi-check-circle-outline"
+    v-alert.dh-alert.dh-alert--info    icon="mdi-information-outline"
+      .dh-alert__title                  — заголовок
+      .dh-alert__text                   — пояснение, сохраняет переносы строк
+      dl.dh-alert__fields > dt + dd     — «Расположение», «Тип документа» и т. п.
+      pre.dh-alert__code                — текст ошибки, выражение, профиль
+
+  У v-alert не задаются type и color: Vuetify красит их классами bg-* и text-* с !important,
+  и палитра их не перекрывает. Значок задается через icon.
+
+  Вне v-alert (например, в ErrorBoundary) тот же вид дает
+    div.dh-alert.dh-alert--error role="alert"
+      i.dh-alert__icon.mdi.mdi-alert-circle-outline
+      div                               — содержимое
+*/
+.dh-alert {
+  --dh-alert-bg: var(--dh-status-bad-bg);
+  --dh-alert-text: var(--dh-status-bad-text);
+
+  min-width: 0;
+  padding: 10px 12px 10px 14px;
+  border: 1px solid color-mix(in srgb, var(--dh-alert-text) 22%, transparent);
+  border-left: 3px solid var(--dh-alert-text);
+  border-radius: var(--dh-radius);
+  background: var(--dh-alert-bg);
+  color: var(--dh-text);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: start;
+}
+
+.dh-alert--error {
+  --dh-alert-bg: var(--dh-status-bad-bg);
+  --dh-alert-text: var(--dh-status-bad-text);
+}
+
+.dh-alert--warning {
+  --dh-alert-bg: var(--dh-status-wip-bg);
+  --dh-alert-text: var(--dh-status-wip-text);
+}
+
+.dh-alert--success {
+  --dh-alert-bg: var(--dh-status-ok-bg);
+  --dh-alert-text: var(--dh-status-ok-text);
+}
+
+.dh-alert--info {
+  --dh-alert-bg: var(--dh-status-info-bg);
+  --dh-alert-text: var(--dh-status-info-text);
+}
+
+.dh-alert + .dh-alert {
+  margin-top: 8px;
+}
+
+/* Колонку содержимого можно сжимать: длинные пути и тексты ошибок переносятся. */
+.dh-alert.v-alert {
+  grid-template-columns: max-content minmax(0, 1fr) max-content max-content;
+}
+
+.dh-alert:not(.v-alert) {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0 10px;
+}
+
+/* Фон и рамку задает сама плашка; подложка и рамка Vuetify скрыты. */
+.dh-alert .v-alert__underlay,
+.dh-alert .v-alert__border {
+  display: none;
+}
+
+.dh-alert .v-alert__prepend {
+  min-height: 20px;
+  margin-inline-end: 10px;
+}
+
+/* Глобальный цвет VIcon по умолчанию приходит inline-стилем, поэтому здесь !important. */
+.dh-alert .v-alert__prepend .v-icon,
+.dh-alert > .dh-alert__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--dh-alert-text) !important;
+  font-size: 20px;
+  line-height: 20px;
+  opacity: 1;
+}
+
+.dh-alert .v-alert__content {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.dh-alert .v-alert__close {
+  margin-inline-start: 8px;
+}
+
+.dh-alert .v-alert__close .v-btn {
+  color: var(--dh-text-secondary);
+}
+
+.dh-alert__title,
+.dh-alert h2,
+.dh-alert h4 {
+  margin: 0 0 4px;
+  color: var(--dh-alert-text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.dh-alert__title:last-child {
+  margin-bottom: 0;
+}
+
+.dh-alert__text {
+  color: var(--dh-text);
+  white-space: pre-wrap;
+}
+
+.dh-alert__fields {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 2px 12px;
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.dh-alert__fields dt {
+  color: var(--dh-text-secondary);
+}
+
+.dh-alert__fields dd {
+  margin: 0;
+  color: var(--dh-text);
+  overflow-wrap: anywhere;
+}
+
+.dh-alert__code {
+  max-height: 320px;
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  overflow: auto;
+  border: 1px solid var(--dh-border);
+  border-radius: calc(var(--dh-radius) - 2px);
+  background: var(--dh-surface);
+  color: var(--dh-text);
+  font-family: var(--dh-font-mono);
+  font-size: 12px;
+  line-height: 18px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/*
+  Всплывающее уведомление (vue-toastification) в виде плашки: toastClassName: 'dh-toast dh-alert--warning'
+  и icon: 'mdi mdi-alert-outline' в параметрах toast. Вид — как у .dh-alert того же типа.
+*/
+.Vue-Toastification__toast.dh-toast {
+  min-height: 0;
+  padding: 12px 12px 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--dh-alert-text) 22%, transparent);
+  border-left: 3px solid var(--dh-alert-text);
+  border-radius: var(--dh-radius);
+  background: var(--dh-alert-bg);
+  box-shadow: var(--dh-shadow-overlay);
+  color: var(--dh-text);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.dh-toast .Vue-Toastification__icon {
+  align-self: flex-start;
+  height: 20px;
+  margin: 0 10px 0 0;
+  color: var(--dh-alert-text);
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.dh-toast .Vue-Toastification__close-button {
+  align-self: flex-start;
+  padding-left: 12px;
+  color: var(--dh-text-secondary);
+  font-size: 20px;
+  line-height: 20px;
+  opacity: 0.7;
+}

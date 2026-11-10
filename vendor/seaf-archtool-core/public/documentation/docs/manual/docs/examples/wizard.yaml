@@ -1,0 +1,18 @@
+docs:
+  archtool.example.wizard:
+    type: wizard
+    title: Пример мастера
+    wizardConfig:
+      showProgress: true
+      navigationRules:
+        restricted: true
+    source:
+      - id: table
+        title: Таблица
+        src: "@document/archtool.table.preset"
+      - id: mermaid
+        title: Mermaid
+        src: "@document/archtool.example.mermaid"
+      - id: plantuml
+        title: PlantUML
+        src: "@document/archtool.example.pml"

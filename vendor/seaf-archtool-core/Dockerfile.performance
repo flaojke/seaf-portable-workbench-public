@@ -1,0 +1,15 @@
+# Build dependencies once using the upstream all-deps stage:
+# docker build --target all-deps -t seaf-local-deps:2026.33.0 .
+FROM seaf-local-deps:2026.33.0 AS build
+WORKDIR /var/www
+COPY . .
+ENV NODE_OPTIONS=--max-old-space-size=4096
+ENV NODE_ENV=production
+ENV VUE_APP_DOCHUB_MODE=backend
+ENV VUE_APP_PLANTUML_SERVER=ORIGIN
+RUN npm run build
+
+FROM seaf/seaf-archtool-core:latest
+WORKDIR /var/www
+COPY --from=build --chown=1000:1000 /var/www/src ./src
+COPY --from=build --chown=1000:1000 /var/www/dist ./dist

@@ -1,0 +1,261 @@
+[
+  {
+    "id": "local.lsv.mcp",
+    "title": "MCP — подключение внешнего агента",
+    "location": "Доработки LSV/01. MCP",
+    "source": "docs/lsv/mcp.md",
+    "relativeMarkdown": "mcp.md"
+  },
+  {
+    "id": "local.lsv.drafts",
+    "title": "Автономные черновики",
+    "location": "Доработки LSV/04. Автономные черновики",
+    "source": "docs/lsv/offline-drafts.md",
+    "relativeMarkdown": "offline-drafts.md"
+  },
+  {
+    "id": "local.lsv.diagnostics",
+    "title": "Мастер подключения и диагностики",
+    "location": "Доработки LSV/05. Мастер подключения и диагностики",
+    "source": "docs/lsv/connection-diagnostics.md",
+    "relativeMarkdown": "connection-diagnostics.md"
+  },
+  {
+    "id": "local.lsv.objects",
+    "title": "Точечные и пакетные изменения",
+    "location": "Доработки LSV/06. Точечные и пакетные изменения",
+    "source": "docs/lsv/object-editing.md",
+    "relativeMarkdown": "object-editing.md"
+  },
+  {
+    "id": "local.lsv.snapshots",
+    "title": "Снимки архитектуры",
+    "location": "Доработки LSV/07. Снимки архитектуры",
+    "source": "docs/lsv/architecture-snapshots.md",
+    "relativeMarkdown": "architecture-snapshots.md"
+  },
+  {
+    "id": "local.lsv.subgraph",
+    "title": "Фокус на подграфе",
+    "location": "Доработки LSV/08. Фокус на подграфе",
+    "source": "docs/lsv/subgraph-focus.md",
+    "relativeMarkdown": "subgraph-focus.md"
+  },
+  {
+    "id": "local.lsv.trust",
+    "title": "Потоки данных и зоны доверия",
+    "location": "Доработки LSV/09. Потоки данных и зоны доверия",
+    "source": "docs/lsv/dataflow-trust.md",
+    "relativeMarkdown": "dataflow-trust.md"
+  },
+  {
+    "id": "local.lsv.semanticdiff",
+    "title": "Семантический diff архитектуры",
+    "location": "Доработки LSV/10. Семантический diff архитектуры",
+    "source": "docs/lsv/semantic-diff.md",
+    "relativeMarkdown": "semantic-diff.md"
+  },
+  {
+    "id": "local.lsv.preview",
+    "title": "Preview портала для ветки и черновика",
+    "location": "Доработки LSV/11. Preview портала для ветки и черновика",
+    "source": "docs/lsv/branch-preview.md",
+    "relativeMarkdown": "branch-preview.md"
+  },
+  {
+    "id": "local.lsv.grounded",
+    "title": "Ответы с проверяемыми источниками",
+    "location": "Доработки LSV/12. Ответы с проверяемыми источниками",
+    "source": "docs/lsv/grounded-answers.md",
+    "relativeMarkdown": "grounded-answers.md"
+  },
+  {
+    "id": "local.lsv.contradictions",
+    "title": "Поиск противоречий между источниками",
+    "location": "Доработки LSV/13. Поиск противоречий между источниками",
+    "source": "docs/lsv/source-contradictions.md",
+    "relativeMarkdown": "source-contradictions.md"
+  },
+  {
+    "id": "local.lsv.drawio",
+    "title": "Draw.io: импорт, экспорт и редактор",
+    "location": "Доработки LSV/14. Draw.io: импорт, экспорт и редактор",
+    "source": "docs/lsv/drawio-roundtrip.md",
+    "relativeMarkdown": "drawio-roundtrip.md"
+  },
+  {
+    "id": "local.lsv.sdd",
+    "title": "SDD и OpenSpec: порядок доработок",
+    "location": "Доработки LSV/15. SDD и OpenSpec: порядок доработок",
+    "source": "docs/lsv/sdd.md",
+    "relativeMarkdown": "sdd.md"
+  },
+  {
+    "id": "local.lsv.portable",
+    "title": "Переносимая версия Windows",
+    "location": "Доработки LSV/16. Переносимая версия Windows",
+    "source": "docs/lsv/portable-windows.md",
+    "relativeMarkdown": "portable-windows.md"
+  },
+  {
+    "id": "local.lsv.projects",
+    "title": "Проекты — папки и Git",
+    "location": "Доработки LSV/17. Проекты",
+    "source": "docs/lsv/project-management.md",
+    "relativeMarkdown": "project-management.md"
+  },
+  {
+    "id": "local.lsv.editor",
+    "title": "Редактор объектов и потоков",
+    "location": "Доработки LSV/18. Редактор",
+    "source": "docs/lsv/object-editor.md",
+    "relativeMarkdown": "object-editor.md"
+  },
+  {
+    "id": "local.lsv.repository_layout",
+    "title": "Структура репозитория — измерения и рекомендации",
+    "location": "Доработки LSV/19. Структура репозитория — измерения и рекомендации",
+    "source": "docs/lsv/repository-layout.md",
+    "relativeMarkdown": "repository-layout.md"
+  },
+  {
+    "id": "local.lsv.reverse.overview",
+    "title": "00. Обзор и область применения",
+    "location": "Доработки LSV/Документация SEAF/00. Обзор и область применения",
+    "source": "docs/lsv/reverse-overview.md",
+    "relativeMarkdown": "reverse-overview.md"
+  },
+  {
+    "id": "local.lsv.reverse.requirements",
+    "title": "01. Требования к проекту",
+    "location": "Доработки LSV/Документация SEAF/01. Требования к проекту",
+    "source": "docs/lsv/reverse-requirements.md",
+    "relativeMarkdown": "reverse-requirements.md"
+  },
+  {
+    "id": "local.lsv.reverse.model",
+    "title": "02. Модель, зависимости и справочники",
+    "location": "Доработки LSV/Документация SEAF/02. Модель, зависимости и справочники",
+    "source": "docs/lsv/reverse-model.md",
+    "relativeMarkdown": "reverse-model.md"
+  },
+  {
+    "id": "local.lsv.reverse.diagrams",
+    "title": "03. Схемы и C4 L2",
+    "location": "Доработки LSV/Документация SEAF/03. Схемы и C4 L2",
+    "source": "docs/lsv/reverse-diagrams.md",
+    "relativeMarkdown": "reverse-diagrams.md"
+  },
+  {
+    "id": "local.lsv.reverse.documents",
+    "title": "04. Документы и сценарии",
+    "location": "Доработки LSV/Документация SEAF/04. Документы и сценарии",
+    "source": "docs/lsv/reverse-documents.md",
+    "relativeMarkdown": "reverse-documents.md"
+  },
+  {
+    "id": "local.lsv.reverse.validation",
+    "title": "05. Проверки и рабочий пример",
+    "location": "Доработки LSV/Документация SEAF/05. Проверки и рабочий пример",
+    "source": "docs/lsv/reverse-validation.md",
+    "relativeMarkdown": "reverse-validation.md"
+  },
+  {
+    "id": "local.lsv.stack",
+    "title": "Stack views: контекст, потоки и размещение",
+    "location": "Доработки LSV/Stack views",
+    "source": "docs/lsv/stack-views.md",
+    "relativeMarkdown": "stack-views.md"
+  },
+  {
+    "id": "local.lsv.usability",
+    "title": "00. Обзор улучшений удобства",
+    "location": "Доработки LSV/20. Удобство работы/00. Обзор",
+    "source": "docs/lsv/usability.md",
+    "relativeMarkdown": "usability.md"
+  },
+  {
+    "id": "local.lsv.usability.search",
+    "title": "01. Поиск и команды",
+    "location": "Доработки LSV/20. Удобство работы/01. Поиск и команды",
+    "source": "docs/lsv/usability-search.md",
+    "relativeMarkdown": "usability-search.md"
+  },
+  {
+    "id": "local.lsv.usability.catalog",
+    "title": "02. Реестры больших моделей",
+    "location": "Доработки LSV/20. Удобство работы/02. Реестры",
+    "source": "docs/lsv/usability-catalog.md",
+    "relativeMarkdown": "usability-catalog.md"
+  },
+  {
+    "id": "local.lsv.usability.issues",
+    "title": "03. Проверки и исправления",
+    "location": "Доработки LSV/20. Удобство работы/03. Проверки",
+    "source": "docs/lsv/usability-issues.md",
+    "relativeMarkdown": "usability-issues.md"
+  },
+  {
+    "id": "local.lsv.usability.passport",
+    "title": "04. Паспорт объекта",
+    "location": "Доработки LSV/20. Удобство работы/04. Паспорт объекта",
+    "source": "docs/lsv/usability-passport.md",
+    "relativeMarkdown": "usability-passport.md"
+  },
+  {
+    "id": "local.lsv.usability.context",
+    "title": "05. Проект и состояние сохранения",
+    "location": "Доработки LSV/20. Удобство работы/05. Контекст проекта",
+    "source": "docs/lsv/usability-context.md",
+    "relativeMarkdown": "usability-context.md"
+  },
+  {
+    "id": "local.lsv.usability.autosave",
+    "title": "06. Автосохранение и отмена",
+    "location": "Доработки LSV/20. Удобство работы/06. Автосохранение",
+    "source": "docs/lsv/usability-autosave.md",
+    "relativeMarkdown": "usability-autosave.md"
+  },
+  {
+    "id": "local.lsv.usability.wizard",
+    "title": "07. Мастер создания системы",
+    "location": "Доработки LSV/20. Удобство работы/07. Мастер системы",
+    "source": "docs/lsv/usability-wizard.md",
+    "relativeMarkdown": "usability-wizard.md"
+  },
+  {
+    "id": "local.lsv.usability.navigation",
+    "title": "08. Избранное и точные ссылки",
+    "location": "Доработки LSV/20. Удобство работы/08. Навигация",
+    "source": "docs/lsv/usability-navigation.md",
+    "relativeMarkdown": "usability-navigation.md"
+  },
+  {
+    "id": "local.lsv.usability.scenarios",
+    "title": "09. Пошаговые сценарии",
+    "location": "Доработки LSV/20. Удобство работы/09. Сценарии",
+    "source": "docs/lsv/usability-scenarios.md",
+    "relativeMarkdown": "usability-scenarios.md"
+  },
+  {
+    "id": "local.lsv.usability.forms",
+    "title": "10. Понятные доступные формы",
+    "location": "Доработки LSV/20. Удобство работы/10. Формы",
+    "source": "docs/lsv/usability-forms.md",
+    "relativeMarkdown": "usability-forms.md"
+  },
+  {
+    "id": "local.lsv.composer",
+    "title": "Конструктор архитектурных схем",
+    "location": "Доработки LSV/21. Конструктор схем",
+    "source": "docs/lsv/diagram-composer.md",
+    "relativeMarkdown": "diagram-composer.md"
+  },
+  {
+    "id": "local.lsv.diagram-editor",
+    "title": "Интерактивный редактор схем 2.3",
+    "location": "Доработки LSV/22. Интерактивный редактор схем",
+    "source": "docs/lsv/diagram-editor.md",
+    "relativeMarkdown": "diagram-editor.md"
+  }
+]

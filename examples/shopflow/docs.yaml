@@ -1,0 +1,325 @@
+docs:
+  dochub.welcome:
+    toc: false
+    type: markdown
+    source: docs/overview.md
+  demo.shop.overview:
+    toc: false
+    title: ShopFlow — обзор проекта
+    location: ShopFlow/00. Обзор проекта
+    type: markdown
+    source: docs/overview.md
+  demo.shop.services:
+    title: Каталог микросервисов
+    location: ShopFlow/02. Каталог микросервисов
+    type: table
+    headers:
+      - { value: service, text: Сервис, link: link }
+      - { value: owner, text: Команда }
+      - { value: responsibility, text: Назначение }
+    source: >
+      ([components.$spread().(
+        $id := $keys()[0];
+        $c := $lookup($, $id);
+        $substring($id, 0, 10) = 'demo.shop.' and $c.kind = 'microservice' ? {
+          "service": $c.title,
+          "owner": $c.owner,
+          "responsibility": $c.description,
+          "link": "/entities/components/blank?dh-component-id=" & $id
+        }
+      )])
+  demo.shop.checkout:
+    title: Сценарий оформления заказа
+    location: ShopFlow/03. Оформление заказа
+    type: markdown
+    source: docs/checkout.md
+  demo.shop.checkout.sequence:
+    title: Диаграмма оформления заказа
+    type: mermaid
+    source: diagrams/checkout.mmd
+  demo.shop.decisions:
+    title: Архитектурные решения
+    location: ShopFlow/04. Архитектурные решения
+    type: markdown
+    source: docs/decisions.md
+  demo.shop.workshop:
+    title: Как работать с проектом
+    location: ShopFlow/05. Практические задания
+    type: markdown
+    source: docs/workshop.md
+
+  demo.shop.agent:
+    title: Работа через MCP
+    location: ShopFlow/06. Работа через MCP
+    type: markdown
+    source: docs/agent-workflow.md
+
+  local.lsv.overview:
+    title: Доработки LSV
+    location: Доработки LSV/00. Обзор
+    type: markdown
+    toc: true
+    source: docs/lsv/overview.md
+  local.lsv.mcp:
+    title: MCP — подключение внешнего агента
+    location: Доработки LSV/01. MCP
+    type: markdown
+    toc: true
+    source: docs/lsv/mcp.md
+  local.lsv.performance:
+    title: Оптимизация производительности SEAF
+    location: Доработки LSV/02. Производительность
+    type: markdown
+    toc: true
+    source: docs/lsv/performance.md
+  local.lsv.workbench:
+    title: Рабочее пространство SEAF
+    location: Доработки LSV/03. Рабочее пространство
+    type: lsv-workbench
+  local.lsv.drafts:
+    title: Автономные черновики
+    location: Доработки LSV/04. Автономные черновики
+    type: markdown
+    toc: true
+    source: docs/lsv/offline-drafts.md
+  local.lsv.diagnostics:
+    title: Мастер подключения и диагностики
+    location: Доработки LSV/05. Мастер подключения и диагностики
+    type: markdown
+    toc: true
+    source: docs/lsv/connection-diagnostics.md
+  local.lsv.objects:
+    title: Точечные и пакетные изменения
+    location: Доработки LSV/06. Точечные и пакетные изменения
+    type: markdown
+    toc: true
+    source: docs/lsv/object-editing.md
+  local.lsv.snapshots:
+    title: Снимки архитектуры
+    location: Доработки LSV/07. Снимки архитектуры
+    type: markdown
+    toc: true
+    source: docs/lsv/architecture-snapshots.md
+  local.lsv.subgraph:
+    title: Фокус на подграфе
+    location: Доработки LSV/08. Фокус на подграфе
+    type: markdown
+    toc: true
+    source: docs/lsv/subgraph-focus.md
+  local.lsv.trust:
+    title: Потоки данных и зоны доверия
+    location: Доработки LSV/09. Потоки данных и зоны доверия
+    type: markdown
+    toc: true
+    source: docs/lsv/dataflow-trust.md
+  local.lsv.semanticdiff:
+    title: Семантический diff архитектуры
+    location: Доработки LSV/10. Семантический diff архитектуры
+    type: markdown
+    toc: true
+    source: docs/lsv/semantic-diff.md
+  local.lsv.preview:
+    title: Preview портала для ветки и черновика
+    location: Доработки LSV/11. Preview портала для ветки и черновика
+    type: markdown
+    toc: true
+    source: docs/lsv/branch-preview.md
+  local.lsv.grounded:
+    title: Ответы с проверяемыми источниками
+    location: Доработки LSV/12. Ответы с проверяемыми источниками
+    type: markdown
+    toc: true
+    source: docs/lsv/grounded-answers.md
+  local.lsv.contradictions:
+    title: Поиск противоречий между источниками
+    location: Доработки LSV/13. Поиск противоречий между источниками
+    type: markdown
+    toc: true
+    source: docs/lsv/source-contradictions.md
+  local.lsv.drawio:
+    title: "Draw.io: импорт, экспорт и редактор"
+    location: "Доработки LSV/14. Draw.io: импорт, экспорт и редактор"
+    type: markdown
+    toc: true
+    source: docs/lsv/drawio-roundtrip.md
+  local.lsv.sdd:
+    title: "SDD и OpenSpec: порядок доработок"
+    location: "Доработки LSV/15. SDD и OpenSpec: порядок доработок"
+    type: markdown
+    toc: true
+    source: docs/lsv/sdd.md
+  local.lsv.portable:
+    title: Переносимая версия Windows
+    location: Доработки LSV/16. Переносимая версия Windows
+    type: markdown
+    toc: true
+    source: docs/lsv/portable-windows.md
+  local.lsv.projects:
+    title: Проекты — папки и Git
+    location: Доработки LSV/17. Проекты
+    type: markdown
+    toc: true
+    source: docs/lsv/project-management.md
+  local.lsv.editor:
+    title: Редактор объектов и потоков
+    location: Доработки LSV/18. Редактор
+    type: markdown
+    toc: true
+    source: docs/lsv/object-editor.md
+  local.projects.workspace:
+    title: Проекты
+    location: /Проекты/Управление проектами
+    type: lsv-workbench
+    view: projects
+  local.editor.workspace:
+    title: Редактор
+    location: /Редактор/Объекты и потоки
+    type: lsv-workbench
+    view: editor
+  local.lsv.repository_layout:
+    title: Структура репозитория — измерения и рекомендации
+    location: Доработки LSV/19. Структура репозитория — измерения и рекомендации
+    type: markdown
+    toc: true
+    source: docs/lsv/repository-layout.md
+  local.lsv.reverse.overview:
+    title: 00. Обзор и область применения
+    location: Доработки LSV/Документация SEAF/00. Обзор и
+      область применения
+    type: markdown
+    toc: true
+    source: docs/lsv/reverse-overview.md
+  local.lsv.reverse.requirements:
+    title: 01. Требования к проекту
+    location: Доработки LSV/Документация SEAF/01.
+      Требования к проекту
+    type: markdown
+    toc: true
+    source: docs/lsv/reverse-requirements.md
+  local.lsv.reverse.model:
+    title: 02. Модель, зависимости и справочники
+    location: Доработки LSV/Документация SEAF/02. Модель,
+      зависимости и справочники
+    type: markdown
+    toc: true
+    source: docs/lsv/reverse-model.md
+  local.lsv.reverse.diagrams:
+    title: 03. Схемы и C4 L2
+    location: Доработки LSV/Документация SEAF/03. Схемы и
+      C4 L2
+    type: markdown
+    toc: true
+    source: docs/lsv/reverse-diagrams.md
+  local.lsv.reverse.documents:
+    title: 04. Документы и сценарии
+    location: Доработки LSV/Документация SEAF/04.
+      Документы и сценарии
+    type: markdown
+    toc: true
+    source: docs/lsv/reverse-documents.md
+  local.lsv.reverse.validation:
+    title: 05. Проверки и рабочий пример
+    location: Доработки LSV/Документация SEAF/05.
+      Проверки и рабочий пример
+    type: markdown
+    toc: true
+    source: docs/lsv/reverse-validation.md
+  local.lsv.stack:
+    title: "Stack views: контекст, потоки и размещение"
+    location: Доработки LSV/Stack views
+    type: markdown
+    toc: true
+    source: docs/lsv/stack-views.md
+  local.lsv.usability:
+    title: 00. Обзор улучшений удобства
+    location: Доработки LSV/20. Удобство работы/00. Обзор
+    type: markdown
+    toc: true
+    source: docs/lsv/usability.md
+  local.lsv.usability.search:
+    title: 01. Поиск и команды
+    location: Доработки LSV/20. Удобство работы/01. Поиск и команды
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-search.md
+  local.lsv.usability.catalog:
+    title: 02. Реестры больших моделей
+    location: Доработки LSV/20. Удобство работы/02. Реестры
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-catalog.md
+  local.lsv.usability.issues:
+    title: 03. Проверки и исправления
+    location: Доработки LSV/20. Удобство работы/03. Проверки
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-issues.md
+  local.lsv.usability.passport:
+    title: 04. Паспорт объекта
+    location: Доработки LSV/20. Удобство работы/04. Паспорт объекта
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-passport.md
+  local.lsv.usability.context:
+    title: 05. Проект и состояние сохранения
+    location: Доработки LSV/20. Удобство работы/05. Контекст проекта
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-context.md
+  local.lsv.usability.autosave:
+    title: 06. Автосохранение и отмена
+    location: Доработки LSV/20. Удобство работы/06. Автосохранение
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-autosave.md
+  local.lsv.usability.wizard:
+    title: 07. Мастер создания системы
+    location: Доработки LSV/20. Удобство работы/07. Мастер системы
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-wizard.md
+  local.lsv.usability.navigation:
+    title: 08. Избранное и точные ссылки
+    location: Доработки LSV/20. Удобство работы/08. Навигация
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-navigation.md
+  local.lsv.usability.scenarios:
+    title: 09. Пошаговые сценарии
+    location: Доработки LSV/20. Удобство работы/09. Сценарии
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-scenarios.md
+  local.lsv.usability.forms:
+    title: 10. Понятные доступные формы
+    location: Доработки LSV/20. Удобство работы/10. Формы
+    type: markdown
+    toc: true
+    source: docs/lsv/usability-forms.md
+  local.lsv.composer:
+    title: Конструктор архитектурных схем
+    location: Доработки LSV/21. Конструктор схем
+    type: markdown
+    toc: true
+    source: docs/lsv/diagram-composer.md
+  local.home.workspace:
+    title: Моя работа
+    location: /Моя работа/Обзор
+    type: lsv-workbench
+    view: home
+  local.composer.workspace:
+    title: Конструктор схем
+    location: /Схемы/Конструктор
+    type: lsv-workbench
+    view: composer
+  local.scenarios.workspace:
+    title: Сценарии взаимодействия
+    location: /Схемы/Сценарии взаимодействия
+    type: lsv-workbench
+    view: scenarios
+  local.lsv.diagram-editor:
+    title: Интерактивный редактор схем 2.3
+    location: Доработки LSV/22. Интерактивный редактор схем
+    type: markdown
+    toc: true
+    source: docs/lsv/diagram-editor.md

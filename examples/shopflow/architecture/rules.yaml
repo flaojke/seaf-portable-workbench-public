@@ -1,0 +1,63 @@
+rules:
+  validators:
+    demo.shop.quality.owner:
+      title: У каждого микросервиса указан владелец
+      source: >-
+        (
+          [components.$spread().(
+            $ID := $keys()[0];
+            $COMPONENT := $lookup($, $ID);
+            {
+              "id": $ID,
+              "inScope": $boolean($match($ID, /^demo\.shop\./)),
+              "isService": $COMPONENT.kind = "microservice",
+              "hasOwner": $type($COMPONENT.owner) = "string"
+                ? $length($trim($COMPONENT.owner)) > 0 : false
+            }
+          )[inScope and isService and $not(hasOwner)].{
+            "uid": "demo-shop-owner-" & id,
+            "location": "/entities/components/blank?dh-component-id=" & id,
+            "correction": "Заполните поле owner названием команды-владельца",
+            "description": "Для микросервиса " & id & " должна быть определена ответственная команда."
+          }]
+        )
+    demo.shop.quality.links:
+      title: Все связи ведут к описанным компонентам
+      source: >-
+        (
+          $MANIFEST := $;
+          [components.$spread()[$boolean($match($keys()[0], /^demo\.shop\./))].(
+            $ID := $keys()[0];
+            $COMPONENT := $lookup($, $ID);
+            $COMPONENT.links.{
+              "ownerID": $ID,
+              "targetID": id
+            }
+          )[$exists(ownerID) and $not($exists($lookup($MANIFEST.components, targetID)))].{
+            "uid": "demo-shop-link-" & ownerID & "-" & targetID,
+            "location": "/entities/components/blank?dh-component-id=" & ownerID,
+            "correction": "Опишите компонент " & targetID & " или исправьте идентификатор в links",
+            "description": "Связь из " & ownerID & " указывает на несуществующий компонент " & targetID & "."
+          }]
+        )
+    demo.shop.quality.description:
+      title: Назначение каждого микросервиса описано
+      source: >-
+        (
+          [components.$spread().(
+            $ID := $keys()[0];
+            $COMPONENT := $lookup($, $ID);
+            {
+              "id": $ID,
+              "inScope": $boolean($match($ID, /^demo\.shop\./)),
+              "isService": $COMPONENT.kind = "microservice",
+              "hasDescription": $type($COMPONENT.description) = "string"
+                ? $length($trim($COMPONENT.description)) > 0 : false
+            }
+          )[inScope and isService and $not(hasDescription)].{
+            "uid": "demo-shop-description-" & id,
+            "location": "/entities/components/blank?dh-component-id=" & id,
+            "correction": "Заполните поле description назначением и границами ответственности сервиса",
+            "description": "Для микросервиса " & id & " необходимо описать его назначение."
+          }]
+        )

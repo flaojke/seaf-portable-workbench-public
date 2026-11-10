@@ -1,0 +1,6 @@
+{
+  "oauth": false,
+  "root_manifest": "example/root.yaml",
+  "pumlServer": "https://diagrams.example.invalid/svg/",
+  "pumlRequestType": "get"
+}

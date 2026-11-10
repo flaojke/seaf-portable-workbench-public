@@ -1,0 +1,72 @@
+:root {
+  --color-brand-primary: rgb(0, 117, 93);
+  --color-brand-soft: color-mix(in srgb, var(--color-brand-primary) 20%, transparent);
+  /* Цвет плейсхолдеров (правило input::placeholder ниже) — приглушенный цвет текста палитры */
+  --color-text-tertiary: var(--dh-text-muted);
+}
+
+html {
+  overflow: hidden !important;
+}
+body {
+  font-family: 'MTSSans', sans-serif !important;
+  font-weight: 400 !important;
+}
+a {
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit !important;
+  font-weight: 700 !important;
+}
+dl + dl {
+  margin-top: 16px;
+}
+dt {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+dd {
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+input::placeholder {
+  color: var(--color-text-tertiary) !important;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Clone the color property from v-application, because Vuetify doesn't do it.
+ If not, the color in the overlay might inherit from unexpected source, like VSCode's --vscode-editor-foreground.*/
+.v-overlay {
+  color: color-mix(
+    in srgb,
+    rgb(var(--v-theme-on-background)) calc(var(--v-high-emphasis-opacity) * 100%),
+    transparent
+  );
+}
+
+/* Magical at-rule to fix printing after migration to Vue 3 and Vuetify 4 */
+@media print {
+  /* Fix for cutting off the bottom of the last page */
+  .v-main, .v-card {
+    overflow: unset !important;
+  }
+  /* Fix for overlay components appearing */
+  .v-overlay__content {
+    display: none;
+  }
+}
+
+.dh-full-height {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}

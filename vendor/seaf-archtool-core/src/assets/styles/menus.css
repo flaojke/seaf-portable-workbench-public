@@ -1,0 +1,215 @@
+/*
+  Copyright (C) 2026 Sber
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Maintainers:
+      Konstantin Myachin <kvmyachin@gmail.com>, Sber
+
+  Contributors:
+      Konstantin Myachin <kvmyachin@gmail.com>, Sber - 2026
+*/
+
+/*
+  Общие стили меню. Цвета — из общей палитры представлений (presentation.css).
+
+  Меню настроек и действий: «⋮» в шапке, настройки песочницы JSONata, меню по правому клику у документов.
+
+  Разметка:
+    v-list.dh-menu                      — .dh-menu--compact: строки ниже, длинные названия переносятся
+      div.dh-menu__caption              — подпись группы
+      v-list-item.dh-menu__item         — строка; значок v-icon.dh-menu__icon, название .dh-menu__title
+        v-switch.dh-menu__switch        — переключатель справа (color="primary")
+      v-divider.dh-menu__divider
+*/
+.dh-menu {
+  min-width: 280px;
+  padding: 4px;
+  border: 1px solid var(--dh-border);
+  border-radius: var(--dh-radius);
+  background: var(--dh-surface);
+  box-shadow: var(--dh-shadow-overlay);
+  color: var(--dh-text);
+}
+
+.dh-menu__caption {
+  padding: 6px 8px 2px;
+  color: var(--dh-text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dh-menu__divider {
+  margin: 4px 0;
+  border-color: var(--dh-border);
+  opacity: 1;
+}
+
+.dh-menu__item {
+  min-height: 36px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.dh-menu__item .v-list-item__overlay {
+  display: none;
+}
+
+.dh-menu__item:hover,
+.dh-menu__item:focus-visible {
+  background: var(--dh-surface-hover);
+}
+
+.dh-menu__item:focus-visible {
+  outline: 2px solid var(--dh-primary);
+  outline-offset: -2px;
+}
+
+.dh-menu__item .v-list-item__spacer {
+  width: 10px;
+}
+
+.dh-menu__icon {
+  color: var(--dh-text-muted);
+  opacity: 1;
+}
+
+.dh-menu__item:hover .dh-menu__icon {
+  color: var(--dh-primary);
+}
+
+.dh-menu__title {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: normal;
+}
+
+.dh-menu__subtitle {
+  color: var(--dh-text-muted);
+  font-size: 12px;
+  line-height: 16px;
+  white-space: normal;
+}
+
+/* Компактное меню со списком действий (меню по правому клику у документов) */
+.dh-menu--compact {
+  min-width: 220px;
+  max-width: 340px;
+}
+
+.dh-menu--compact .dh-menu__item {
+  min-height: 32px;
+  padding: 6px 8px;
+}
+
+.dh-menu--compact .dh-menu__title {
+  white-space: normal;
+}
+
+.dh-menu__switch {
+  flex: none;
+  margin: 0 4px 0 12px;
+}
+
+/* Выключенный переключатель — нейтральный, включенный — фирменного цвета */
+.dh-menu__switch .v-switch__track {
+  opacity: 1;
+  background-color: var(--dh-border-strong);
+}
+
+.dh-menu__switch .v-selection-control--dirty .v-switch__track {
+  background-color: var(--dh-primary-soft);
+}
+
+/*
+  Выпадающий список выбора значения: фильтры страницы поиска, источник данных в песочнице JSONata.
+  Окно выводится вне компонента (teleport), поэтому стиль задан в общем файле.
+
+  Разметка:
+    v-menu / v-select / v-autocomplete с content-class (menu-props.contentClass) = dh-pick
+      v-list.dh-pick__list
+        v-list-item.dh-pick__item       — строка; выбранная: .v-list-item--active или .dh-pick__item--selected
+          v-icon.dh-pick__check         — галочка у выбранного значения
+          mark.dh-pick__match           — подсветка найденного текста
+        div.dh-pick__empty              — «Ничего не найдено», «Ищем…»
+*/
+.dh-pick {
+  border: 1px solid var(--dh-border);
+  border-radius: var(--dh-radius);
+  background: var(--dh-surface);
+  box-shadow: var(--dh-shadow-overlay);
+}
+
+.dh-pick > .v-list,
+.dh-pick .dh-pick__list {
+  padding: 4px;
+  border-radius: inherit;
+  background: transparent;
+  box-shadow: none;
+  color: var(--dh-text);
+}
+
+.dh-pick .dh-pick__item {
+  min-height: 32px;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.dh-pick .dh-pick__item .v-list-item__overlay {
+  display: none;
+}
+
+.dh-pick .dh-pick__item:hover,
+.dh-pick .dh-pick__item:focus-visible {
+  background: var(--dh-surface-hover);
+}
+
+.dh-pick .dh-pick__item:focus-visible {
+  outline: 2px solid var(--dh-primary);
+  outline-offset: -2px;
+}
+
+.dh-pick .dh-pick__item.v-list-item--active,
+.dh-pick .dh-pick__item--selected {
+  background: var(--dh-primary-soft);
+  color: var(--dh-primary-strong);
+  font-weight: 600;
+}
+
+.dh-pick .dh-pick__item .v-list-item-title,
+.dh-pick .dh-pick__title {
+  font-size: 13px;
+  font-weight: inherit;
+  line-height: 18px;
+  letter-spacing: normal;
+  white-space: normal;
+}
+
+.dh-pick .dh-pick__check {
+  color: var(--dh-primary);
+}
+
+.dh-pick .dh-pick__match {
+  border-radius: 2px;
+  background: var(--dh-status-wip-bg);
+  color: inherit;
+}
+
+.dh-pick .dh-pick__empty {
+  padding: 8px;
+  color: var(--dh-text-muted);
+  font-size: 13px;
+}

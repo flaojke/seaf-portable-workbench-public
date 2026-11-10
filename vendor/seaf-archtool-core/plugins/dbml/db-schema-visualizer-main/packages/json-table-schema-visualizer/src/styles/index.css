@@ -1,0 +1,4 @@
+#dbml_app {
+    @tailwind base;
+}
+@tailwind utilities;

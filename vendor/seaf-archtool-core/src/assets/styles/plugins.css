@@ -1,0 +1,18 @@
+/* Цвета плагина editable-table: имена плагина, значения — из общей палитры (presentation.css) */
+.editable-table-colors {
+  --color-white: var(--dh-surface);
+  --color-white-dark: var(--dh-border);
+  --color-gray: var(--dh-text-muted);
+  --color-gray-dark: var(--dh-border-strong);
+
+  --color-primary: var(--dh-primary);
+  --color-primary-focus: var(--dh-primary);
+  --color-bg-header: var(--dh-surface-header);
+  --color-focus: var(--dh-primary);
+  --color-bg-cell: var(--dh-surface);
+  --color-select: var(--dh-primary-soft);
+  --color-bg-chips: var(--dh-chip-bg);
+  --color-border: var(--dh-border-strong);
+  --color-warning: var(--dh-danger);
+  --color-text-with-dark-bg: var(--dh-on-primary);
+}

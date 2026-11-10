@@ -1,0 +1,17 @@
+{
+  "format": "seaf-reviewed-spec-sync-v1",
+  "date": "2026-11-10",
+  "scope": "Functional acceptance only; packaging/deployment/publication remain pending",
+  "capability": "interactive-diagram-editing",
+  "deltaSha256": "83730ba9b1625731b8204130f01c436d0c065cfd6560558990fbc015a0cf7642",
+  "masterSha256": "356ef295cef6a99c0ecaeae8ea447b3e9a615fc5f4a3301786894121ef86a6cb",
+  "requirements": [
+    "Contextual interactive canvas",
+    "Source-backed entity properties",
+    "Explicit component composition",
+    "Real integrations and data flows",
+    "Atomic model and diagram publication",
+    "Recoverable semantic drafts",
+    "Discoverable editing instructions"
+  ]
+}

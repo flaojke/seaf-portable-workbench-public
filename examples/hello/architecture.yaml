@@ -1,0 +1,65 @@
+catalogs:
+  teams:
+    items:
+      - { id: Frontend, title: Команда интерфейса }
+      - { id: Backend, title: Команда API }
+entities:
+  components:
+    schema:
+      patternProperties:
+        "^[a-zA-Z][a-zA-Z0-9_-]*(\\.[a-zA-Z0-9][a-zA-Z0-9_-]*)*$":
+          properties:
+            owner: { type: string, title: Владелец, dictionary: teams }
+            status: { type: string, title: Статус, enum: [ Draft, Approved ] }
+components:
+  demo:
+    title: Примеры
+    entity: cloud
+  demo.hello:
+    title: Hello
+    entity: system
+  demo.hello.web:
+    title: Web App
+    entity: system
+    owner: Frontend
+    status: Draft
+    description: Интерфейс пользователя.
+    links:
+      - {
+          id: demo.hello.api,
+          title: Запрос к API,
+          protocol: HTTPS
+        }
+  demo.hello.api:
+    title: API Service
+    entity: system
+    owner: Backend
+    status: Approved
+    description: Прикладные операции.
+    links:
+      - {
+          id: demo.hello.db,
+          title: Чтение и запись,
+          protocol: SQL
+        }
+  demo.hello.db:
+    title: Database
+    entity: database
+    owner: Backend
+    status: Approved
+contexts:
+  demo.hello:
+    title: Hello — карта систем
+    location: Примеры/Hello/Карта систем
+    components: [ demo, demo.hello, demo.hello.* ]
+  demo.hello.l2:
+    title: Hello — L2
+    location: Примеры/Hello/L2 из модели
+    presentation: smartants
+    extra-links: false
+    components:
+      - demo
+      - demo.hello
+      - demo.hello.web
+      - demo.hello.api
+      - demo.hello.db

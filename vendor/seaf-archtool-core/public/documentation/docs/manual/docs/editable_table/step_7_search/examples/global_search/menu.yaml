@@ -1,0 +1,5 @@
+docs:
+  archtool.plugins.editable-table.search.global_search.menu:
+    location: SEAF.ArchTool/Руководство/Документы/Редактируемая таблица/7. Поиск/1. Глобальный поиск
+    type: markdown
+    source: template.md

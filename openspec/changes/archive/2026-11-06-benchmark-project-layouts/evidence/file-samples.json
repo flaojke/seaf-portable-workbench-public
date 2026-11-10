@@ -1,0 +1,258 @@
+{
+  "format": "seaf-public-evidence-summary-v2",
+  "status": "passed",
+  "scope": "Curated historical observations; no new test execution or additional acceptance is asserted.",
+  "countsAreNotAdditive": true,
+  "observedStates": {
+    "passed": 211
+  },
+  "observedCounts": [
+    {
+      "group": 1,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 2,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 3,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 4,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 5,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 6,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 7,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 8,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 9,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 10,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 11,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 12,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 13,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 14,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 15,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 16,
+      "systems": 3000,
+      "integrations": 9000,
+      "contexts": 2
+    },
+    {
+      "group": 17,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 18,
+      "systems": 3000,
+      "integrations": 9000,
+      "contexts": 2
+    },
+    {
+      "group": 19,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 20,
+      "systems": 3000,
+      "integrations": 9000,
+      "contexts": 2
+    },
+    {
+      "group": 21,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 22,
+      "systems": 3000,
+      "integrations": 9000,
+      "contexts": 2
+    },
+    {
+      "group": 23,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 24,
+      "systems": 3000,
+      "integrations": 9000,
+      "contexts": 2
+    }
+  ],
+  "capturedGroupCount": 84,
+  "omittedCountGroups": 60,
+  "capturedArrayCounts": [
+    {
+      "kind": "samples",
+      "count": 42
+    }
+  ],
+  "limitations": [
+    "Raw samples, host hardware, runtime identity, captured model/AI payloads and duplicate per-file inventories remain only in private ignored originals.",
+    "Summary observations can overlap; do not add counts across suites, retries or historical releases.",
+    "SOURCE-MANIFEST.json is the only complete published source inventory."
+  ],
+  "productionWrites": false,
+  "synthetic": true,
+  "aggregates": [
+    {
+      "N": 1000,
+      "layout": "baseline",
+      "startupMedianMs": 2957.1175999999978,
+      "reloadMedianMs": 1605.616399999999,
+      "uiColdMedianMs": 1308.800000000745
+    },
+    {
+      "N": 1000,
+      "layout": "v1",
+      "startupMedianMs": 3165.5002000000004,
+      "reloadMedianMs": 1866.0908000000072,
+      "uiColdMedianMs": 1315.800000000745
+    },
+    {
+      "N": 1000,
+      "layout": "v2",
+      "startupMedianMs": 3113.5964999999997,
+      "reloadMedianMs": 1813.192850000014,
+      "uiColdMedianMs": 1314.800000000745
+    },
+    {
+      "N": 1000,
+      "layout": "v3",
+      "startupMedianMs": 3443.974899999994,
+      "reloadMedianMs": 2077.617500000011,
+      "uiColdMedianMs": 1312.1000000014901
+    },
+    {
+      "N": 1000,
+      "layout": "v4",
+      "startupMedianMs": 3421.0971000000136,
+      "reloadMedianMs": 2066.898499999952,
+      "uiColdMedianMs": 1318.800000000745
+    },
+    {
+      "N": 1000,
+      "layout": "v5",
+      "startupMedianMs": 3710.6157999999996,
+      "reloadMedianMs": 2291.481150000007,
+      "uiColdMedianMs": 1301.6000000014901
+    },
+    {
+      "N": 1000,
+      "layout": "v6",
+      "startupMedianMs": 2940.262799999997,
+      "reloadMedianMs": 1559.5469000000085,
+      "uiColdMedianMs": 1303.300000000745
+    },
+    {
+      "N": 3000,
+      "layout": "baseline",
+      "startupMedianMs": 12997.29469999997,
+      "reloadMedianMs": 11592.632550000002,
+      "uiColdMedianMs": 1360.699999999255
+    },
+    {
+      "N": 3000,
+      "layout": "v1",
+      "startupMedianMs": 14320.844400000002,
+      "reloadMedianMs": 12914.895999999964,
+      "uiColdMedianMs": 1384
+    },
+    {
+      "N": 3000,
+      "layout": "v2",
+      "startupMedianMs": 14507.704499999993,
+      "reloadMedianMs": 13292.022100000002,
+      "uiColdMedianMs": 1374
+    },
+    {
+      "N": 3000,
+      "layout": "v3",
+      "startupMedianMs": 14699.374300000025,
+      "reloadMedianMs": 13697.883999999991,
+      "uiColdMedianMs": 1403.699999999255
+    },
+    {
+      "N": 3000,
+      "layout": "v4",
+      "startupMedianMs": 13996.574299999978,
+      "reloadMedianMs": 13206.373000000021,
+      "uiColdMedianMs": 1386.0999999977648
+    },
+    {
+      "N": 3000,
+      "layout": "v5",
+      "startupMedianMs": 15238.791199999978,
+      "reloadMedianMs": 13760.280249999982,
+      "uiColdMedianMs": 1345.300000000745
+    },
+    {
+      "N": 3000,
+      "layout": "v6",
+      "startupMedianMs": 13006.530199999921,
+      "reloadMedianMs": 11994.11215000003,
+      "uiColdMedianMs": 1336.6000000014901
+    }
+  ]
+}

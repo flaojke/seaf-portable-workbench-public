@@ -1,0 +1,21 @@
+# === Docker & CI/CD configs ===
+.git
+.gitignore
+.github
+.gitlab-ci.yml
+.gitverse
+compose.yaml
+docker-bake.hcl
+Dockerfile
+
+# === Caches & Build Artifacts ===
+**/.cache
+**/dist
+**/node_modules
+cache
+
+# === Other ===
+**/.draft
+*.md
+.npmrc
+.env

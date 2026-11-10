@@ -1,0 +1,19 @@
+{
+  "name": "dochub-plugin-charts",
+  "version": "1.0.0",
+  "description": "Chart.js (vue-chartjs) for DocHub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "V.Markin",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "vue-chartjs": "4.1.2",
+    "chart.js": "3.9.1",
+    "chartjs-color": "2.4.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0-0"
+  }
+}

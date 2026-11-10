@@ -1,0 +1,121 @@
+/* Общие стили */
+.markdown-document pre[class*="language-markuper"] {
+    color: var(--dh-text) !important;
+    background: none !important;
+    border: none !important;
+    text-shadow: none !important;
+}
+
+.markdown-document code[class*="language-markuper"] {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    color: inherit !important;
+    background: none !important;
+    text-shadow: none !important;
+}
+
+
+/* Элементы формы: подпись и значение обычным шрифтом */
+.markdown-document pre.language-markuper-form-label {
+    padding: 0 !important;
+    color: var(--dh-text-secondary) !important;
+    font-family: inherit !important;
+    font-size: 0.8125rem !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+}
+
+.markdown-document pre.language-markuper-form-field {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: inherit !important;
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+}
+
+.markdown-document code.language-markuper-form-field {
+    padding: 0 !important;
+    overflow-wrap: break-word !important;
+    white-space: break-spaces;
+}
+
+/* Пустое значение заполненного поля: прочерк подставляет ядро при рендере markdown (formatFormFields) */
+.markdown-document code.language-markuper-form-field.md-empty-value {
+    color: var(--dh-text-muted) !important;
+}
+
+/* Значение-ссылка: [```значение```](url) рендерится как <p><a><code> */
+.markdown-document .md-form-field__values > p > a > code {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    padding: 0;
+}
+
+/* Поле формы: подпись слева, значения справа друг под другом. Колонка подписи — треть ширины
+   блока, от 120 до 220px. Когда значению остается меньше 224px, оно переносится под подпись:
+   в блоке уже 360px подпись занимает всю строку */
+.markdown-document .md-form-field {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 16px;
+    row-gap: 2px;
+    margin-top: 8px;
+}
+
+.markdown-document .md-form-field:first-child {
+    margin-top: 0;
+}
+
+.markdown-document .md-form-field > pre.language-markuper-form-label {
+    flex: 1 0 clamp(120px, 33.33%, 220px);
+    min-width: 0;
+    max-width: 100%;
+    margin: 0 !important;
+    overflow: visible !important;
+}
+
+/* Длинное слово подписи переносится внутри колонки подписи и не расширяет ее */
+.markdown-document .md-form-field > pre.language-markuper-form-label > code {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+}
+
+.markdown-document .md-form-field__values {
+    flex: 999 1 224px;
+    min-width: 0;
+}
+
+/* Абзац-значение без отступов абзаца markdown (p.md-el): между полями только промежуток поля */
+.markdown-document .md-form-field .md-form-field__values > p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+/* Строка «Не заполнено» с подписями пустых полей блока, отделена от полей пунктиром */
+.markdown-document .md-form-empty {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--dh-border);
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    color: var(--dh-text-muted);
+}
+
+/* В блоке нет заполненных полей: только строка «Не заполнено», без линии */
+.markdown-document .md-form-empty--only {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.markdown-document .md-form-empty__title {
+    color: var(--dh-text-secondary);
+}

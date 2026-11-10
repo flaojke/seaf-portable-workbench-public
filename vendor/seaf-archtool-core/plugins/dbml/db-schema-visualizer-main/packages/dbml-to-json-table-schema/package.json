@@ -1,0 +1,15 @@
+{
+  "name": "dbml-to-json-table-schema",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "types": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --collectCoverage"
+  },
+  "dependencies": {
+    "@dbml/core": "^3.4.0",
+    "shared": "0.0.0"
+  },
+  "devDependencies": {}
+}

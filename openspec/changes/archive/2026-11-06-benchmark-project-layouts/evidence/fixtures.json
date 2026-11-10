@@ -1,0 +1,162 @@
+{
+  "format": "seaf-public-evidence-summary-v2",
+  "status": "recorded",
+  "scope": "Curated historical observations; no new test execution or additional acceptance is asserted.",
+  "countsAreNotAdditive": true,
+  "observedStates": {
+    "passed": 1
+  },
+  "observedCounts": [
+    {
+      "group": 1,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 2,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 3,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 4,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 5,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 6,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 7,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 8,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 9,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 10,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 11,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 12,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 13,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 14,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 15,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 16,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 17,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 18,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 19,
+      "systems": 1000,
+      "integrations": 3000
+    },
+    {
+      "group": 20,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 21,
+      "systems": 1000,
+      "integrations": 3000,
+      "contexts": 2
+    },
+    {
+      "group": 22,
+      "systems": 3000,
+      "integrations": 9000
+    },
+    {
+      "group": 23,
+      "systems": 3000,
+      "integrations": 9000,
+      "contexts": 2
+    },
+    {
+      "group": 24,
+      "systems": 3000,
+      "integrations": 9000,
+      "contexts": 2
+    }
+  ],
+  "capturedGroupCount": 44,
+  "omittedCountGroups": 20,
+  "capturedArrayCounts": [
+    {
+      "kind": "fixtures",
+      "count": 14
+    }
+  ],
+  "limitations": [
+    "Raw samples, host hardware, runtime identity, captured model/AI payloads and duplicate per-file inventories remain only in private ignored originals.",
+    "Summary observations can overlap; do not add counts across suites, retries or historical releases.",
+    "SOURCE-MANIFEST.json is the only complete published source inventory."
+  ],
+  "productionWrites": false,
+  "synthetic": true
+}

@@ -1,0 +1,15 @@
+technologies:
+  sections:
+    runtime:
+      title: Прикладной стек
+    storage:
+      title: Хранение данных
+    platform:
+      title: Инфраструктура
+  items:
+    NodeJS: {title: Node.js, section: runtime, status: adopt}
+    TypeScript: {title: TypeScript, section: runtime, status: adopt}
+    PostgreSQL: {title: PostgreSQL, section: storage, status: adopt}
+    Redis: {title: Redis, section: storage, status: adopt}
+    RabbitMQ: {title: RabbitMQ, section: platform, status: adopt}
+    Keycloak: {title: Keycloak, section: platform, status: adopt}
